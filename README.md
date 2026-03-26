@@ -1,6 +1,6 @@
 # Minecraft Bedrock Edition Command Reference
 
-This documentation was generated with AI assistance. Generated from `available_commands.json` and localized with `en_US.lang`. Commands included: **83**.
+This documentation was generated with AI assistance. Generated from BDS Commands and localized with `en_US.lang`. Commands included: **83**.
 
 This document lists every command overload found in the source data, each overload's full syntax, and parameter-level details with candidate values. However, there is some inappropriate candidates, such as camera time.
 
