@@ -1,7 +1,6 @@
 # Minecraft Bedrock Edition Command Reference
 
-This documentation was generated with AI assistance.
-Commands included: **83**.
+This documentation was generated with AI assistance. Generated from `available_commands.json` and localized with `en_US.lang`. Commands included: **83**.
 
 This document lists every command overload found in the source data, each overload's full syntax, and parameter-level details with candidate values. However, there is some inappropriate candidates, such as camera time.
 
@@ -113,18 +112,18 @@ Enable Aim Assist
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `set` | Yes | Static Enum (AimAssistActionSet) | Literal keyword. | `set`<br>[enum reference](#enum-static-34) |
+   | 2 | `set` | Yes | Static Enum (AimAssistActionSet) | Literal keyword. | `set`<br>[enum reference](#static-enum-aimassistactionset-34) |
    | 3 | `x angle` | No | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
    | 4 | `y angle` | No | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
    | 5 | `max distance` | No | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
-   | 6 | `target mode` | No | Static Enum (AimAssistTargetMode) | Value from static enum `AimAssistTargetMode`. | `distance`, `angle`<br>[enum reference](#enum-static-33) |
+   | 6 | `target mode` | No | Static Enum (AimAssistTargetMode) | Value from static enum `AimAssistTargetMode`. | `distance`, `angle`<br>[enum reference](#static-enum-aimassisttargetmode-33) |
    | 7 | `preset id` | No | String (id:56) | Single string token. | `example_text` |
 
 2. `/aimassist <players> clear`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `clear` | Yes | Static Enum (AimAssistActionClear) | Literal keyword. | `clear`<br>[enum reference](#enum-static-35) |
+   | 2 | `clear` | Yes | Static Enum (AimAssistActionClear) | Literal keyword. | `clear`<br>[enum reference](#static-enum-aimassistactionclear-35) |
 
 ### /allowlist
 
@@ -137,7 +136,7 @@ Manages the server allowlist.
 1. `/allowlist <action> [<name>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `action` | Yes | Static Enum (AllowListAction) | Value from static enum `AllowListAction`. | `add`, `remove`, `list`, `reload`, `on`, `off`<br>[enum reference](#enum-static-244) |
+   | 1 | `action` | Yes | Static Enum (AllowListAction) | Value from static enum `AllowListAction`. | `add`, `remove`, `list`, `reload`, `on`, `off`<br>[enum reference](#static-enum-allowlistaction-244) |
    | 2 | `name` | No | String (id:56) | Single string token. | `example_text` |
 
 ### /camera
@@ -150,14 +149,14 @@ Issues a camera instruction
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-   | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#enum-static-37) |
+   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+   | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#static-enum-ease-37) |
    | 5 | `easeTime` | Yes | Float (id:3) | Decimal number. Time value. | `0`, `1.5`, `-2.0` |
-   | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#enum-static-32) |
-   | 7 | `pos` | Yes | Static Enum (pos) | Literal keyword. Coordinate argument. | `pos`<br>[enum reference](#enum-static-38) |
+   | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#static-enum-easing-32) |
+   | 7 | `pos` | Yes | Static Enum (pos) | Literal keyword. Coordinate argument. | `pos`<br>[enum reference](#static-enum-pos-38) |
    | 8 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 9 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#enum-static-39) |
+   | 9 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#static-enum-rot-39) |
    | 10 | `xRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
    | 11 | `yRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
 
@@ -165,52 +164,52 @@ Issues a camera instruction
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-   | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#enum-static-37) |
+   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+   | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#static-enum-ease-37) |
    | 5 | `easeTime` | Yes | Float (id:3) | Decimal number. Time value. | `0`, `1.5`, `-2.0` |
-   | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#enum-static-32) |
-   | 7 | `pos` | Yes | Static Enum (pos) | Literal keyword. Coordinate argument. | `pos`<br>[enum reference](#enum-static-38) |
+   | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#static-enum-easing-32) |
+   | 7 | `pos` | Yes | Static Enum (pos) | Literal keyword. Coordinate argument. | `pos`<br>[enum reference](#static-enum-pos-38) |
    | 8 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 9 | `facing` | Yes | Static Enum (facing) | Literal keyword. | `facing`<br>[enum reference](#enum-static-42) |
+   | 9 | `facing` | Yes | Static Enum (facing) | Literal keyword. | `facing`<br>[enum reference](#static-enum-facing-42) |
    | 10 | `lookAtEntity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
 
 3. `/camera <players> set <preset> ease <easeTime> <easeType> pos <position> facing <lookAtPosition>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-   | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#enum-static-37) |
+   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+   | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#static-enum-ease-37) |
    | 5 | `easeTime` | Yes | Float (id:3) | Decimal number. Time value. | `0`, `1.5`, `-2.0` |
-   | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#enum-static-32) |
-   | 7 | `pos` | Yes | Static Enum (pos) | Literal keyword. Coordinate argument. | `pos`<br>[enum reference](#enum-static-38) |
+   | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#static-enum-easing-32) |
+   | 7 | `pos` | Yes | Static Enum (pos) | Literal keyword. Coordinate argument. | `pos`<br>[enum reference](#static-enum-pos-38) |
    | 8 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 9 | `facing` | Yes | Static Enum (facing) | Literal keyword. | `facing`<br>[enum reference](#enum-static-42) |
+   | 9 | `facing` | Yes | Static Enum (facing) | Literal keyword. | `facing`<br>[enum reference](#static-enum-facing-42) |
    | 10 | `lookAtPosition` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
 
 4. `/camera <players> set <preset> ease <easeTime> <easeType> pos <position>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-   | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#enum-static-37) |
+   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+   | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#static-enum-ease-37) |
    | 5 | `easeTime` | Yes | Float (id:3) | Decimal number. Time value. | `0`, `1.5`, `-2.0` |
-   | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#enum-static-32) |
-   | 7 | `pos` | Yes | Static Enum (pos) | Literal keyword. Coordinate argument. | `pos`<br>[enum reference](#enum-static-38) |
+   | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#static-enum-easing-32) |
+   | 7 | `pos` | Yes | Static Enum (pos) | Literal keyword. Coordinate argument. | `pos`<br>[enum reference](#static-enum-pos-38) |
    | 8 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
 
 5. `/camera <players> set <preset> ease <easeTime> <easeType> rot <xRot> <yRot>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-   | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#enum-static-37) |
+   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+   | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#static-enum-ease-37) |
    | 5 | `easeTime` | Yes | Float (id:3) | Decimal number. Time value. | `0`, `1.5`, `-2.0` |
-   | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#enum-static-32) |
-   | 7 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#enum-static-39) |
+   | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#static-enum-easing-32) |
+   | 7 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#static-enum-rot-39) |
    | 8 | `xRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
    | 9 | `yRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
 
@@ -218,46 +217,46 @@ Issues a camera instruction
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-   | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#enum-static-37) |
+   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+   | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#static-enum-ease-37) |
    | 5 | `easeTime` | Yes | Float (id:3) | Decimal number. Time value. | `0`, `1.5`, `-2.0` |
-   | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#enum-static-32) |
-   | 7 | `facing` | Yes | Static Enum (facing) | Literal keyword. | `facing`<br>[enum reference](#enum-static-42) |
+   | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#static-enum-easing-32) |
+   | 7 | `facing` | Yes | Static Enum (facing) | Literal keyword. | `facing`<br>[enum reference](#static-enum-facing-42) |
    | 8 | `lookAtEntity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
 
 7. `/camera <players> set <preset> ease <easeTime> <easeType> facing <lookAtPosition>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-   | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#enum-static-37) |
+   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+   | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#static-enum-ease-37) |
    | 5 | `easeTime` | Yes | Float (id:3) | Decimal number. Time value. | `0`, `1.5`, `-2.0` |
-   | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#enum-static-32) |
-   | 7 | `facing` | Yes | Static Enum (facing) | Literal keyword. | `facing`<br>[enum reference](#enum-static-42) |
+   | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#static-enum-easing-32) |
+   | 7 | `facing` | Yes | Static Enum (facing) | Literal keyword. | `facing`<br>[enum reference](#static-enum-facing-42) |
    | 8 | `lookAtPosition` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
 
 8. `/camera <players> set <preset> ease <easeTime> <easeType> [default]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-   | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#enum-static-37) |
+   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+   | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#static-enum-ease-37) |
    | 5 | `easeTime` | Yes | Float (id:3) | Decimal number. Time value. | `0`, `1.5`, `-2.0` |
-   | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#enum-static-32) |
-   | 7 | `default` | No | Static Enum (default) | Literal keyword. | `default`<br>[enum reference](#enum-static-48) |
+   | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#static-enum-easing-32) |
+   | 7 | `default` | No | Static Enum (default) | Literal keyword. | `default`<br>[enum reference](#static-enum-default-48) |
 
 9. `/camera <players> set <preset> pos <position> rot <xRot> <yRot>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-   | 4 | `pos` | Yes | Static Enum (pos) | Literal keyword. Coordinate argument. | `pos`<br>[enum reference](#enum-static-38) |
+   | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+   | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+   | 4 | `pos` | Yes | Static Enum (pos) | Literal keyword. Coordinate argument. | `pos`<br>[enum reference](#static-enum-pos-38) |
    | 5 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 6 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#enum-static-39) |
+   | 6 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#static-enum-rot-39) |
    | 7 | `xRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
    | 8 | `yRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
 
@@ -265,38 +264,38 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `pos` | Yes | Static Enum (pos) | Literal keyword. Coordinate argument. | `pos`<br>[enum reference](#enum-static-38) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `pos` | Yes | Static Enum (pos) | Literal keyword. Coordinate argument. | `pos`<br>[enum reference](#static-enum-pos-38) |
     | 5 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-    | 6 | `facing` | Yes | Static Enum (facing) | Literal keyword. | `facing`<br>[enum reference](#enum-static-42) |
+    | 6 | `facing` | Yes | Static Enum (facing) | Literal keyword. | `facing`<br>[enum reference](#static-enum-facing-42) |
     | 7 | `lookAtEntity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
 
 11. `/camera <players> set <preset> pos <position> facing <lookAtPosition>`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `pos` | Yes | Static Enum (pos) | Literal keyword. Coordinate argument. | `pos`<br>[enum reference](#enum-static-38) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `pos` | Yes | Static Enum (pos) | Literal keyword. Coordinate argument. | `pos`<br>[enum reference](#static-enum-pos-38) |
     | 5 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-    | 6 | `facing` | Yes | Static Enum (facing) | Literal keyword. | `facing`<br>[enum reference](#enum-static-42) |
+    | 6 | `facing` | Yes | Static Enum (facing) | Literal keyword. | `facing`<br>[enum reference](#static-enum-facing-42) |
     | 7 | `lookAtPosition` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
 
 12. `/camera <players> target_entity <entity>`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `targetEntity` | Yes | Static Enum (target_entity) | Literal keyword. | `target_entity`<br>[enum reference](#enum-static-43) |
+    | 2 | `targetEntity` | Yes | Static Enum (target_entity) | Literal keyword. | `target_entity`<br>[enum reference](#static-enum-targetentity-43) |
     | 3 | `entity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
 
 13. `/camera <players> target_entity <entity> target_center_offset <xTargetCenterOffset> <yTargetCenterOffset> <zTargetCenterOffset>`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `targetEntity` | Yes | Static Enum (target_entity) | Literal keyword. | `target_entity`<br>[enum reference](#enum-static-43) |
+    | 2 | `targetEntity` | Yes | Static Enum (target_entity) | Literal keyword. | `target_entity`<br>[enum reference](#static-enum-targetentity-43) |
     | 3 | `entity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 4 | `targetCenterOffset` | Yes | Static Enum (target_center_offset) | Literal keyword. | `target_center_offset`<br>[enum reference](#enum-static-44) |
+    | 4 | `targetCenterOffset` | Yes | Static Enum (target_center_offset) | Literal keyword. | `target_center_offset`<br>[enum reference](#static-enum-targetcenteroffset-44) |
     | 5 | `xTargetCenterOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 6 | `yTargetCenterOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 7 | `zTargetCenterOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
@@ -305,15 +304,15 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `removeTarget` | Yes | Static Enum (remove_target) | Literal keyword. | `remove_target`<br>[enum reference](#enum-static-45) |
+    | 2 | `removeTarget` | Yes | Static Enum (remove_target) | Literal keyword. | `remove_target`<br>[enum reference](#static-enum-removetarget-45) |
 
 15. `/camera <players> set <preset> view_offset <xViewOffset> <yViewOffset>`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `view_offset` | Yes | Static Enum (view_offset) | Literal keyword. | `view_offset`<br>[enum reference](#enum-static-46) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `view_offset` | Yes | Static Enum (view_offset) | Literal keyword. | `view_offset`<br>[enum reference](#static-enum-viewoffset-46) |
     | 5 | `xViewOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 6 | `yViewOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
 
@@ -321,9 +320,9 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `entity_offset` | Yes | Static Enum (entity_offset) | Literal keyword. | `entity_offset`<br>[enum reference](#enum-static-47) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `entity_offset` | Yes | Static Enum (entity_offset) | Literal keyword. | `entity_offset`<br>[enum reference](#static-enum-entityoffset-47) |
     | 5 | `xEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 6 | `yEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 7 | `zEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
@@ -332,12 +331,12 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#enum-static-39) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#static-enum-rot-39) |
     | 5 | `xRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
     | 6 | `yRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
-    | 7 | `view_offset` | Yes | Static Enum (view_offset) | Literal keyword. | `view_offset`<br>[enum reference](#enum-static-46) |
+    | 7 | `view_offset` | Yes | Static Enum (view_offset) | Literal keyword. | `view_offset`<br>[enum reference](#static-enum-viewoffset-46) |
     | 8 | `xViewOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 9 | `yViewOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
 
@@ -345,12 +344,12 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#enum-static-39) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#static-enum-rot-39) |
     | 5 | `xRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
     | 6 | `yRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
-    | 7 | `entity_offset` | Yes | Static Enum (entity_offset) | Literal keyword. | `entity_offset`<br>[enum reference](#enum-static-47) |
+    | 7 | `entity_offset` | Yes | Static Enum (entity_offset) | Literal keyword. | `entity_offset`<br>[enum reference](#static-enum-entityoffset-47) |
     | 8 | `xEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 9 | `yEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 10 | `zEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
@@ -359,12 +358,12 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `view_offset` | Yes | Static Enum (view_offset) | Literal keyword. | `view_offset`<br>[enum reference](#enum-static-46) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `view_offset` | Yes | Static Enum (view_offset) | Literal keyword. | `view_offset`<br>[enum reference](#static-enum-viewoffset-46) |
     | 5 | `xViewOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 6 | `yViewOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
-    | 7 | `entity_offset` | Yes | Static Enum (entity_offset) | Literal keyword. | `entity_offset`<br>[enum reference](#enum-static-47) |
+    | 7 | `entity_offset` | Yes | Static Enum (entity_offset) | Literal keyword. | `entity_offset`<br>[enum reference](#static-enum-entityoffset-47) |
     | 8 | `xEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 9 | `yEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 10 | `zEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
@@ -373,15 +372,15 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#enum-static-39) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#static-enum-rot-39) |
     | 5 | `xRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
     | 6 | `yRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
-    | 7 | `view_offset` | Yes | Static Enum (view_offset) | Literal keyword. | `view_offset`<br>[enum reference](#enum-static-46) |
+    | 7 | `view_offset` | Yes | Static Enum (view_offset) | Literal keyword. | `view_offset`<br>[enum reference](#static-enum-viewoffset-46) |
     | 8 | `xViewOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 9 | `yViewOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
-    | 10 | `entity_offset` | Yes | Static Enum (entity_offset) | Literal keyword. | `entity_offset`<br>[enum reference](#enum-static-47) |
+    | 10 | `entity_offset` | Yes | Static Enum (entity_offset) | Literal keyword. | `entity_offset`<br>[enum reference](#static-enum-entityoffset-47) |
     | 11 | `xEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 12 | `yEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 13 | `zEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
@@ -390,12 +389,12 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#enum-static-37) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#static-enum-ease-37) |
     | 5 | `easeTime` | Yes | Float (id:3) | Decimal number. Time value. | `0`, `1.5`, `-2.0` |
-    | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#enum-static-32) |
-    | 7 | `view_offset` | Yes | Static Enum (view_offset) | Literal keyword. | `view_offset`<br>[enum reference](#enum-static-46) |
+    | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#static-enum-easing-32) |
+    | 7 | `view_offset` | Yes | Static Enum (view_offset) | Literal keyword. | `view_offset`<br>[enum reference](#static-enum-viewoffset-46) |
     | 8 | `xViewOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 9 | `yViewOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
 
@@ -403,12 +402,12 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#enum-static-37) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#static-enum-ease-37) |
     | 5 | `easeTime` | Yes | Float (id:3) | Decimal number. Time value. | `0`, `1.5`, `-2.0` |
-    | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#enum-static-32) |
-    | 7 | `entity_offset` | Yes | Static Enum (entity_offset) | Literal keyword. | `entity_offset`<br>[enum reference](#enum-static-47) |
+    | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#static-enum-easing-32) |
+    | 7 | `entity_offset` | Yes | Static Enum (entity_offset) | Literal keyword. | `entity_offset`<br>[enum reference](#static-enum-entityoffset-47) |
     | 8 | `xEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 9 | `yEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 10 | `zEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
@@ -417,15 +416,15 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#enum-static-37) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#static-enum-ease-37) |
     | 5 | `easeTime` | Yes | Float (id:3) | Decimal number. Time value. | `0`, `1.5`, `-2.0` |
-    | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#enum-static-32) |
-    | 7 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#enum-static-39) |
+    | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#static-enum-easing-32) |
+    | 7 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#static-enum-rot-39) |
     | 8 | `xRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
     | 9 | `yRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
-    | 10 | `view_offset` | Yes | Static Enum (view_offset) | Literal keyword. | `view_offset`<br>[enum reference](#enum-static-46) |
+    | 10 | `view_offset` | Yes | Static Enum (view_offset) | Literal keyword. | `view_offset`<br>[enum reference](#static-enum-viewoffset-46) |
     | 11 | `xViewOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 12 | `yViewOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
 
@@ -433,15 +432,15 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#enum-static-37) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#static-enum-ease-37) |
     | 5 | `easeTime` | Yes | Float (id:3) | Decimal number. Time value. | `0`, `1.5`, `-2.0` |
-    | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#enum-static-32) |
-    | 7 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#enum-static-39) |
+    | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#static-enum-easing-32) |
+    | 7 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#static-enum-rot-39) |
     | 8 | `xRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
     | 9 | `yRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
-    | 10 | `entity_offset` | Yes | Static Enum (entity_offset) | Literal keyword. | `entity_offset`<br>[enum reference](#enum-static-47) |
+    | 10 | `entity_offset` | Yes | Static Enum (entity_offset) | Literal keyword. | `entity_offset`<br>[enum reference](#static-enum-entityoffset-47) |
     | 11 | `xEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 12 | `yEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 13 | `zEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
@@ -450,15 +449,15 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#enum-static-37) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#static-enum-ease-37) |
     | 5 | `easeTime` | Yes | Float (id:3) | Decimal number. Time value. | `0`, `1.5`, `-2.0` |
-    | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#enum-static-32) |
-    | 7 | `view_offset` | Yes | Static Enum (view_offset) | Literal keyword. | `view_offset`<br>[enum reference](#enum-static-46) |
+    | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#static-enum-easing-32) |
+    | 7 | `view_offset` | Yes | Static Enum (view_offset) | Literal keyword. | `view_offset`<br>[enum reference](#static-enum-viewoffset-46) |
     | 8 | `xViewOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 9 | `yViewOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
-    | 10 | `entity_offset` | Yes | Static Enum (entity_offset) | Literal keyword. | `entity_offset`<br>[enum reference](#enum-static-47) |
+    | 10 | `entity_offset` | Yes | Static Enum (entity_offset) | Literal keyword. | `entity_offset`<br>[enum reference](#static-enum-entityoffset-47) |
     | 11 | `xEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 12 | `yEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 13 | `zEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
@@ -467,18 +466,18 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#enum-static-37) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `ease` | Yes | Static Enum (ease) | Literal keyword. | `ease`<br>[enum reference](#static-enum-ease-37) |
     | 5 | `easeTime` | Yes | Float (id:3) | Decimal number. Time value. | `0`, `1.5`, `-2.0` |
-    | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#enum-static-32) |
-    | 7 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#enum-static-39) |
+    | 6 | `easeType` | Yes | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#static-enum-easing-32) |
+    | 7 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#static-enum-rot-39) |
     | 8 | `xRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
     | 9 | `yRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
-    | 10 | `view_offset` | Yes | Static Enum (view_offset) | Literal keyword. | `view_offset`<br>[enum reference](#enum-static-46) |
+    | 10 | `view_offset` | Yes | Static Enum (view_offset) | Literal keyword. | `view_offset`<br>[enum reference](#static-enum-viewoffset-46) |
     | 11 | `xViewOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 12 | `yViewOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
-    | 13 | `entity_offset` | Yes | Static Enum (entity_offset) | Literal keyword. | `entity_offset`<br>[enum reference](#enum-static-47) |
+    | 13 | `entity_offset` | Yes | Static Enum (entity_offset) | Literal keyword. | `entity_offset`<br>[enum reference](#static-enum-entityoffset-47) |
     | 14 | `xEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 15 | `yEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 16 | `zEntityOffset` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
@@ -487,18 +486,18 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `pos` | Yes | Static Enum (pos) | Literal keyword. Coordinate argument. | `pos`<br>[enum reference](#enum-static-38) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `pos` | Yes | Static Enum (pos) | Literal keyword. Coordinate argument. | `pos`<br>[enum reference](#static-enum-pos-38) |
     | 5 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
 
 28. `/camera <players> set <preset> rot <xRot> <yRot>`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#enum-static-39) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `rot` | Yes | Static Enum (rot) | Literal keyword. | `rot`<br>[enum reference](#static-enum-rot-39) |
     | 5 | `xRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
     | 6 | `yRot` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
 
@@ -506,44 +505,44 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `facing` | Yes | Static Enum (facing) | Literal keyword. | `facing`<br>[enum reference](#enum-static-42) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `facing` | Yes | Static Enum (facing) | Literal keyword. | `facing`<br>[enum reference](#static-enum-facing-42) |
     | 5 | `lookAtEntity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
 
 30. `/camera <players> set <preset> facing <lookAtPosition>`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `facing` | Yes | Static Enum (facing) | Literal keyword. | `facing`<br>[enum reference](#enum-static-42) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `facing` | Yes | Static Enum (facing) | Literal keyword. | `facing`<br>[enum reference](#static-enum-facing-42) |
     | 5 | `lookAtPosition` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
 
 31. `/camera <players> set <preset> [default]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#enum-static-36) |
-    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#enum-dynamic-8) |
-    | 4 | `default` | No | Static Enum (default) | Literal keyword. | `default`<br>[enum reference](#enum-static-48) |
+    | 2 | `set` | Yes | Static Enum (set) | Literal keyword. | `set`<br>[enum reference](#static-enum-set-36) |
+    | 3 | `preset` | Yes | Dynamic Enum (CameraPresets) | Runtime or registry-backed value from dynamic enum `CameraPresets`. | `minecraft:first_person`, `minecraft:fixed_boom`, `minecraft:follow_orbit`, `minecraft:free`, `minecraft:third_person`, `minecraft:third_person_front`<br>[enum reference](#dynamic-enum-camerapresets-8) |
+    | 4 | `default` | No | Static Enum (default) | Literal keyword. | `default`<br>[enum reference](#static-enum-default-48) |
 
 32. `/camera <players> clear`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `clear` | Yes | Static Enum (clear) | Literal keyword. | `clear`<br>[enum reference](#enum-static-49) |
+    | 2 | `clear` | Yes | Static Enum (clear) | Literal keyword. | `clear`<br>[enum reference](#static-enum-clear-49) |
 
 33. `/camera <players> fade time <fadeInSeconds> <holdSeconds> <fadeOutSeconds> color <red> <green> <blue>`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `fade` | Yes | Static Enum (fade) | Literal keyword. | `fade`<br>[enum reference](#enum-static-50) |
-    | 3 | `time` | Yes | Static Enum (time) | Literal keyword. Time value. | `time`<br>[enum reference](#enum-static-51) |
+    | 2 | `fade` | Yes | Static Enum (fade) | Literal keyword. | `fade`<br>[enum reference](#static-enum-fade-50) |
+    | 3 | `time` | Yes | Static Enum (time) | Literal keyword. Time value. | `time`<br>[enum reference](#static-enum-time-51) |
     | 4 | `fadeInSeconds` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 5 | `holdSeconds` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 6 | `fadeOutSeconds` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
-    | 7 | `color` | Yes | Static Enum (color) | Literal keyword. | `color`<br>[enum reference](#enum-static-52) |
+    | 7 | `color` | Yes | Static Enum (color) | Literal keyword. | `color`<br>[enum reference](#static-enum-color-52) |
     | 8 | `red` | Yes | Integer (id:1) | Whole number. Color channel (commonly 0-255). | `0`, `1`, `-1` |
     | 9 | `green` | Yes | Integer (id:1) | Whole number. Color channel (commonly 0-255). | `0`, `1`, `-1` |
     | 10 | `blue` | Yes | Integer (id:1) | Whole number. Color channel (commonly 0-255). | `0`, `1`, `-1` |
@@ -552,8 +551,8 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `fade` | Yes | Static Enum (fade) | Literal keyword. | `fade`<br>[enum reference](#enum-static-50) |
-    | 3 | `time` | Yes | Static Enum (time) | Literal keyword. Time value. | `time`<br>[enum reference](#enum-static-51) |
+    | 2 | `fade` | Yes | Static Enum (fade) | Literal keyword. | `fade`<br>[enum reference](#static-enum-fade-50) |
+    | 3 | `time` | Yes | Static Enum (time) | Literal keyword. Time value. | `time`<br>[enum reference](#static-enum-time-51) |
     | 4 | `fadeInSeconds` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 5 | `holdSeconds` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 6 | `fadeOutSeconds` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
@@ -562,8 +561,8 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `fade` | Yes | Static Enum (fade) | Literal keyword. | `fade`<br>[enum reference](#enum-static-50) |
-    | 3 | `color` | Yes | Static Enum (color) | Literal keyword. | `color`<br>[enum reference](#enum-static-52) |
+    | 2 | `fade` | Yes | Static Enum (fade) | Literal keyword. | `fade`<br>[enum reference](#static-enum-fade-50) |
+    | 3 | `color` | Yes | Static Enum (color) | Literal keyword. | `color`<br>[enum reference](#static-enum-color-52) |
     | 4 | `red` | Yes | Integer (id:1) | Whole number. Color channel (commonly 0-255). | `0`, `1`, `-1` |
     | 5 | `green` | Yes | Integer (id:1) | Whole number. Color channel (commonly 0-255). | `0`, `1`, `-1` |
     | 6 | `blue` | Yes | Integer (id:1) | Whole number. Color channel (commonly 0-255). | `0`, `1`, `-1` |
@@ -572,24 +571,24 @@ Issues a camera instruction
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `fade` | Yes | Static Enum (fade) | Literal keyword. | `fade`<br>[enum reference](#enum-static-50) |
+    | 2 | `fade` | Yes | Static Enum (fade) | Literal keyword. | `fade`<br>[enum reference](#static-enum-fade-50) |
 
 37. `/camera <players> fov_set <fov_value> [<fovEaseTime>] [<fovEaseType>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `fov_set` | Yes | Static Enum (fov_set) | Literal keyword. | `fov_set`<br>[enum reference](#enum-static-40) |
+    | 2 | `fov_set` | Yes | Static Enum (fov_set) | Literal keyword. | `fov_set`<br>[enum reference](#static-enum-fovset-40) |
     | 3 | `fov_value` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
     | 4 | `fovEaseTime` | No | Float (id:3) | Decimal number. Time value. | `0`, `1.5`, `-2.0` |
-    | 5 | `fovEaseType` | No | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#enum-static-32) |
+    | 5 | `fovEaseType` | No | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#static-enum-easing-32) |
 
 38. `/camera <players> fov_clear [<fovEaseTime>] [<fovEaseType>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
     | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 2 | `fov_clear` | Yes | Static Enum (fov_clear) | Literal keyword. | `fov_clear`<br>[enum reference](#enum-static-41) |
+    | 2 | `fov_clear` | Yes | Static Enum (fov_clear) | Literal keyword. | `fov_clear`<br>[enum reference](#static-enum-fovclear-41) |
     | 3 | `fovEaseTime` | No | Float (id:3) | Decimal number. Time value. | `0`, `1.5`, `-2.0` |
-    | 4 | `fovEaseType` | No | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#enum-static-32) |
+    | 4 | `fovEaseType` | No | Static Enum (Easing) | Value from static enum `Easing`. | `linear`, `spring`, `in_quad`, `out_quad`, `in_out_quad`, `in_cubic`, `out_cubic`, `in_out_cubic`, `in_quart`, `out_quart` ... (32 total)<br>[enum reference](#static-enum-easing-32) |
 
 ### /camerashake
 
@@ -600,16 +599,16 @@ Applies shaking to the players' camera with a specified intensity and duration.
 1. `/camerashake add <player> [<intensity>] [<seconds>] [<shakeType>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `action` | Yes | Static Enum (CameraShakeActionAdd) | Literal keyword. | `add`<br>[enum reference](#enum-static-53) |
+   | 1 | `action` | Yes | Static Enum (CameraShakeActionAdd) | Literal keyword. | `add`<br>[enum reference](#static-enum-camerashakeactionadd-53) |
    | 2 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
    | 3 | `intensity` | No | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
    | 4 | `seconds` | No | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
-   | 5 | `shakeType` | No | Static Enum (CameraShakeType) | Value from static enum `CameraShakeType`. | `positional`, `rotational`<br>[enum reference](#enum-static-55) |
+   | 5 | `shakeType` | No | Static Enum (CameraShakeType) | Value from static enum `CameraShakeType`. | `positional`, `rotational`<br>[enum reference](#static-enum-camerashaketype-55) |
 
 2. `/camerashake stop [<player>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `action` | Yes | Static Enum (CameraShakeActionStop) | Literal keyword. | `stop`<br>[enum reference](#enum-static-54) |
+   | 1 | `action` | Yes | Static Enum (CameraShakeActionStop) | Literal keyword. | `stop`<br>[enum reference](#static-enum-camerashakeactionstop-54) |
    | 2 | `player` | No | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
 
 ### /changesetting
@@ -621,19 +620,19 @@ Changes a setting on the dedicated server while it's running.
 1. `/changesetting allow-cheats <value>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `setting` | Yes | Static Enum (BoolSettingName) | Literal keyword. | `allow-cheats`<br>[enum reference](#enum-static-246) |
-   | 2 | `value` | Yes | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 1 | `setting` | Yes | Static Enum (BoolSettingName) | Literal keyword. | `allow-cheats`<br>[enum reference](#static-enum-boolsettingname-246) |
+   | 2 | `value` | Yes | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 2. `/changesetting difficulty <value>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `setting` | Yes | Static Enum (DifficultySettingName) | Literal keyword. | `difficulty`<br>[enum reference](#enum-static-247) |
-   | 2 | `value` | Yes | Static Enum (Difficulty) | Value from static enum `Difficulty`. | `normal`, `peaceful`, `easy`, `hard`, `p`, `e`, `n`, `h`<br>[enum reference](#enum-static-68) |
+   | 1 | `setting` | Yes | Static Enum (DifficultySettingName) | Literal keyword. | `difficulty`<br>[enum reference](#static-enum-difficultysettingname-247) |
+   | 2 | `value` | Yes | Static Enum (Difficulty) | Value from static enum `Difficulty`. | `normal`, `peaceful`, `easy`, `hard`, `p`, `e`, `n`, `h`<br>[enum reference](#static-enum-difficulty-68) |
 
 3. `/changesetting difficulty <value>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `setting` | Yes | Static Enum (DifficultySettingName) | Literal keyword. | `difficulty`<br>[enum reference](#enum-static-247) |
+   | 1 | `setting` | Yes | Static Enum (DifficultySettingName) | Literal keyword. | `difficulty`<br>[enum reference](#static-enum-difficultysettingname-247) |
    | 2 | `value` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
 
 ### /clear
@@ -646,7 +645,7 @@ Clears items from player inventory.
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | No | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `itemName` | No | Static Enum (Item) | Value from static enum `Item`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:polished_basalt`, `polished_basalt`, `minecraft:nether_gold_ore`, `nether_gold_ore` ... (3399 total)<br>[enum reference](#enum-static-9) |
+   | 2 | `itemName` | No | Static Enum (Item) | Value from static enum `Item`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:polished_basalt`, `polished_basalt`, `minecraft:nether_gold_ore`, `nether_gold_ore` ... (3399 total)<br>[enum reference](#static-enum-item-9) |
    | 3 | `data` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 4 | `maxCount` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
 
@@ -673,8 +672,8 @@ Clones blocks from one region to another.
    | 1 | `begin` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 2 | `end` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 3 | `destination` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 4 | `maskMode` | No | Static Enum (MaskMode) | Value from static enum `MaskMode`. | `replace`, `masked`<br>[enum reference](#enum-static-56) |
-   | 5 | `cloneMode` | No | Static Enum (CloneMode) | Value from static enum `CloneMode`. | `normal`, `force`, `move`<br>[enum reference](#enum-static-58) |
+   | 4 | `maskMode` | No | Static Enum (MaskMode) | Value from static enum `MaskMode`. | `replace`, `masked`<br>[enum reference](#static-enum-maskmode-56) |
+   | 5 | `cloneMode` | No | Static Enum (CloneMode) | Value from static enum `CloneMode`. | `normal`, `force`, `move`<br>[enum reference](#static-enum-clonemode-58) |
 
 2. `/clone <begin> <end> <destination> filtered <cloneMode> <tileName> [<blockStates>]`
    | # | Parameter | Required | Type | Description | Candidates |
@@ -682,9 +681,9 @@ Clones blocks from one region to another.
    | 1 | `begin` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 2 | `end` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 3 | `destination` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 4 | `maskMode` | Yes | Static Enum (MaskModeFiltered) | Literal keyword. | `filtered`<br>[enum reference](#enum-static-57) |
-   | 5 | `cloneMode` | Yes | Static Enum (CloneMode) | Value from static enum `CloneMode`. | `normal`, `force`, `move`<br>[enum reference](#enum-static-58) |
-   | 6 | `tileName` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#enum-static-24) |
+   | 4 | `maskMode` | Yes | Static Enum (MaskModeFiltered) | Literal keyword. | `filtered`<br>[enum reference](#static-enum-maskmodefiltered-57) |
+   | 5 | `cloneMode` | Yes | Static Enum (CloneMode) | Value from static enum `CloneMode`. | `normal`, `force`, `move`<br>[enum reference](#static-enum-clonemode-58) |
+   | 6 | `tileName` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#static-enum-block-24) |
    | 7 | `blockStates` | No | Block States (id:84) | Block state expression. | `["facing_direction"=2]`, `{"facing_direction":2}` |
 
 ### /controlscheme
@@ -697,14 +696,14 @@ Sets or clears control scheme.
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `set` | Yes | Static Enum (CameraControlSchemeSet) | Literal keyword. | `set`<br>[enum reference](#enum-static-59) |
-   | 3 | `control scheme` | Yes | Static Enum (controlscheme) | Value from static enum `controlscheme`. | `camera_relative_strafe`, `camera_relative`, `player_relative_strafe`, `player_relative`, `locked_player_relative_strafe`<br>[enum reference](#enum-static-61) |
+   | 2 | `set` | Yes | Static Enum (CameraControlSchemeSet) | Literal keyword. | `set`<br>[enum reference](#static-enum-cameracontrolschemeset-59) |
+   | 3 | `control scheme` | Yes | Static Enum (controlscheme) | Value from static enum `controlscheme`. | `camera_relative_strafe`, `camera_relative`, `player_relative_strafe`, `player_relative`, `locked_player_relative_strafe`<br>[enum reference](#static-enum-controlscheme-61) |
 
 2. `/controlscheme <players> clear`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `clear` | Yes | Static Enum (CameraControlSchemeClear) | Literal keyword. | `clear`<br>[enum reference](#enum-static-60) |
+   | 2 | `clear` | Yes | Static Enum (CameraControlSchemeClear) | Literal keyword. | `clear`<br>[enum reference](#static-enum-cameracontrolschemeclear-60) |
 
 ### /damage
 
@@ -717,15 +716,15 @@ Apply damage to the specified entities.
    | --- | --- | --- | --- | --- | --- |
    | 1 | `target` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
    | 2 | `amount` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-   | 3 | `cause` | No | Static Enum (DamageCause) | Value from static enum `DamageCause`. | `piston`, `lava`, `campfire`, `fire`, `anvil`, `magma`, `soul_campfire`, `wither`, `falling_block`, `fireworks` ... (36 total)<br>[enum reference](#enum-static-62) |
+   | 3 | `cause` | No | Static Enum (DamageCause) | Value from static enum `DamageCause`. | `piston`, `lava`, `campfire`, `fire`, `anvil`, `magma`, `soul_campfire`, `wither`, `falling_block`, `fireworks` ... (36 total)<br>[enum reference](#static-enum-damagecause-62) |
 
 2. `/damage <target> <amount> <cause> entity <damager>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `target` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
    | 2 | `amount` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-   | 3 | `cause` | Yes | Static Enum (DamageCause) | Value from static enum `DamageCause`. | `piston`, `lava`, `campfire`, `fire`, `anvil`, `magma`, `soul_campfire`, `wither`, `falling_block`, `fireworks` ... (36 total)<br>[enum reference](#enum-static-62) |
-   | 4 | `origin` | Yes | Static Enum (DamageOriginActor) | Literal keyword. | `entity`<br>[enum reference](#enum-static-64) |
+   | 3 | `cause` | Yes | Static Enum (DamageCause) | Value from static enum `DamageCause`. | `piston`, `lava`, `campfire`, `fire`, `anvil`, `magma`, `soul_campfire`, `wither`, `falling_block`, `fireworks` ... (36 total)<br>[enum reference](#static-enum-damagecause-62) |
+   | 4 | `origin` | Yes | Static Enum (DamageOriginActor) | Literal keyword. | `entity`<br>[enum reference](#static-enum-damageoriginactor-64) |
    | 5 | `damager` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
 
 ### /daylock
@@ -739,7 +738,7 @@ Locks and unlocks the day-night cycle.
 1. `/daylock [<lock>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `lock` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 1 | `lock` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 ### /deop
 
@@ -761,7 +760,7 @@ Opens NPC dialogue for a player.
 1. `/dialogue open <npc> <player> [<sceneName>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `open` | Yes | Static Enum (DialogueOpenAction) | Literal keyword. | `open`<br>[enum reference](#enum-static-66) |
+   | 1 | `open` | Yes | Static Enum (DialogueOpenAction) | Literal keyword. | `open`<br>[enum reference](#static-enum-dialogueopenaction-66) |
    | 2 | `npc` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
    | 3 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
    | 4 | `sceneName` | No | String (id:56) | Single string token. | `example_text` |
@@ -769,7 +768,7 @@ Opens NPC dialogue for a player.
 2. `/dialogue change <npc> <sceneName> [<players>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `change` | Yes | Static Enum (DialogueChangeAction) | Literal keyword. | `change`<br>[enum reference](#enum-static-67) |
+   | 1 | `change` | Yes | Static Enum (DialogueChangeAction) | Literal keyword. | `change`<br>[enum reference](#static-enum-dialoguechangeaction-67) |
    | 2 | `npc` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
    | 3 | `sceneName` | Yes | String (id:56) | Single string token. | `example_text` |
    | 4 | `players` | No | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
@@ -783,7 +782,7 @@ Sets the difficulty level.
 1. `/difficulty <difficulty>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `difficulty` | Yes | Static Enum (Difficulty) | Value from static enum `Difficulty`. | `normal`, `peaceful`, `easy`, `hard`, `p`, `e`, `n`, `h`<br>[enum reference](#enum-static-68) |
+   | 1 | `difficulty` | Yes | Static Enum (Difficulty) | Value from static enum `Difficulty`. | `normal`, `peaceful`, `easy`, `hard`, `p`, `e`, `n`, `h`<br>[enum reference](#static-enum-difficulty-68) |
 
 2. `/difficulty <difficulty>`
    | # | Parameter | Required | Type | Description | Candidates |
@@ -800,26 +799,26 @@ Add or remove status effects.
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `Mode` | Yes | Static Enum (ClearEffects) | Literal keyword. | `clear`<br>[enum reference](#enum-static-69) |
-   | 3 | `effect` | No | Static Enum (Effect) | Value from static enum `Effect`. | `wither`, `speed`, `slowness`, `haste`, `mining_fatigue`, `strength`, `instant_health`, `instant_damage`, `jump_boost`, `nausea` ... (37 total)<br>[enum reference](#enum-static-71) |
+   | 2 | `Mode` | Yes | Static Enum (ClearEffects) | Literal keyword. | `clear`<br>[enum reference](#static-enum-cleareffects-69) |
+   | 3 | `effect` | No | Static Enum (Effect) | Value from static enum `Effect`. | `wither`, `speed`, `slowness`, `haste`, `mining_fatigue`, `strength`, `instant_health`, `instant_damage`, `jump_boost`, `nausea` ... (37 total)<br>[enum reference](#static-enum-effect-71) |
 
 2. `/effect <player> <effect> [<seconds>] [<amplifier>] [<hideParticles>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `effect` | Yes | Static Enum (Effect) | Value from static enum `Effect`. | `wither`, `speed`, `slowness`, `haste`, `mining_fatigue`, `strength`, `instant_health`, `instant_damage`, `jump_boost`, `nausea` ... (37 total)<br>[enum reference](#enum-static-71) |
+   | 2 | `effect` | Yes | Static Enum (Effect) | Value from static enum `Effect`. | `wither`, `speed`, `slowness`, `haste`, `mining_fatigue`, `strength`, `instant_health`, `instant_damage`, `jump_boost`, `nausea` ... (37 total)<br>[enum reference](#static-enum-effect-71) |
    | 3 | `seconds` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 4 | `amplifier` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-   | 5 | `hideParticles` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 5 | `hideParticles` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 3. `/effect <player> <effect> infinite [<amplifier>] [<hideParticles>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `effect` | Yes | Static Enum (Effect) | Value from static enum `Effect`. | `wither`, `speed`, `slowness`, `haste`, `mining_fatigue`, `strength`, `instant_health`, `instant_damage`, `jump_boost`, `nausea` ... (37 total)<br>[enum reference](#enum-static-71) |
-   | 3 | `Mode` | Yes | Static Enum (AddInfiniteEffect) | Literal keyword. | `infinite`<br>[enum reference](#enum-static-70) |
+   | 2 | `effect` | Yes | Static Enum (Effect) | Value from static enum `Effect`. | `wither`, `speed`, `slowness`, `haste`, `mining_fatigue`, `strength`, `instant_health`, `instant_damage`, `jump_boost`, `nausea` ... (37 total)<br>[enum reference](#static-enum-effect-71) |
+   | 3 | `Mode` | Yes | Static Enum (AddInfiniteEffect) | Literal keyword. | `infinite`<br>[enum reference](#static-enum-addinfiniteeffect-70) |
    | 4 | `amplifier` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-   | 5 | `hideParticles` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 5 | `hideParticles` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 ### /enchant
 
@@ -831,7 +830,7 @@ Adds an enchantment to a player's selected item.
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `enchantmentName` | Yes | Static Enum (Enchant) | Value from static enum `Enchant`. | `protection`, `fire_protection`, `feather_falling`, `blast_protection`, `projectile_protection`, `thorns`, `respiration`, `depth_strider`, `aqua_affinity`, `sharpness` ... (42 total)<br>[enum reference](#enum-static-29) |
+   | 2 | `enchantmentName` | Yes | Static Enum (Enchant) | Value from static enum `Enchant`. | `protection`, `fire_protection`, `feather_falling`, `blast_protection`, `projectile_protection`, `thorns`, `respiration`, `depth_strider`, `aqua_affinity`, `sharpness` ... (42 total)<br>[enum reference](#static-enum-enchant-29) |
    | 3 | `level` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
 
 2. `/enchant <player> <enchantmentId> [<level>]`
@@ -850,9 +849,9 @@ Triggers an event for the specified object(s)
 1. `/event entity <target> <eventName>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `entity` | Yes | Static Enum (EventEntityAction) | Literal keyword. | `entity`<br>[enum reference](#enum-static-72) |
+   | 1 | `entity` | Yes | Static Enum (EventEntityAction) | Literal keyword. | `entity`<br>[enum reference](#static-enum-evententityaction-72) |
    | 2 | `target` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 3 | `eventName` | Yes | Dynamic Enum (EntityEvents) | Runtime or registry-backed value from dynamic enum `EntityEvents`. | `abort_sheltering`, `admire_item_started_event`, `admire_item_stopped_event`, `ageable_grow_up`, `attack_cooldown_complete_event`, `attacked`, `be_sheared`, `become_angry`, `become_angry_event`, `become_calm_event` ... (451 total)<br>[enum reference](#enum-dynamic-7) |
+   | 3 | `eventName` | Yes | Dynamic Enum (EntityEvents) | Runtime or registry-backed value from dynamic enum `EntityEvents`. | `abort_sheltering`, `admire_item_started_event`, `admire_item_stopped_event`, `ageable_grow_up`, `attack_cooldown_complete_event`, `attacked`, `be_sheared`, `become_angry`, `become_angry_event`, `become_calm_event` ... (451 total)<br>[enum reference](#dynamic-enum-entityevents-7) |
 
 ### /execute
 
@@ -863,43 +862,43 @@ Executes a command on behalf of one or more entities.
 1. `/execute as <origin> <command>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `subcommand` | Yes | Static Enum (Option_As) | Literal keyword. | `as`<br>[enum reference](#enum-static-74) |
+   | 1 | `subcommand` | Yes | Static Enum (Option_As) | Literal keyword. | `as`<br>[enum reference](#static-enum-optionas-74) |
    | 2 | `origin` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
    | 3 | `chainedCommand` | Yes | Command | Nested command to execute. | `/say hello`, `/tp @s ~ ~1 ~` |
 
 2. `/execute at <origin> <command>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `subcommand` | Yes | Static Enum (Option_At) | Literal keyword. | `at`<br>[enum reference](#enum-static-75) |
+   | 1 | `subcommand` | Yes | Static Enum (Option_At) | Literal keyword. | `at`<br>[enum reference](#static-enum-optionat-75) |
    | 2 | `origin` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
    | 3 | `chainedCommand` | Yes | Command | Nested command to execute. | `/say hello`, `/tp @s ~ ~1 ~` |
 
 3. `/execute in <dimension> <command>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `subcommand` | Yes | Static Enum (Option_In) | Literal keyword. | `in`<br>[enum reference](#enum-static-76) |
-   | 2 | `dimension` | Yes | Static Enum (Dimension) | Value from static enum `Dimension`. | `overworld`, `nether`, `the_end`<br>[enum reference](#enum-static-12) |
+   | 1 | `subcommand` | Yes | Static Enum (Option_In) | Literal keyword. | `in`<br>[enum reference](#static-enum-optionin-76) |
+   | 2 | `dimension` | Yes | Static Enum (Dimension) | Value from static enum `Dimension`. | `overworld`, `nether`, `the_end`<br>[enum reference](#static-enum-dimension-12) |
    | 3 | `chainedCommand` | Yes | Command | Nested command to execute. | `/say hello`, `/tp @s ~ ~1 ~` |
 
 4. `/execute positioned <position> <command>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `subcommand` | Yes | Static Enum (Option_Positioned) | Literal keyword. | `positioned`<br>[enum reference](#enum-static-77) |
+   | 1 | `subcommand` | Yes | Static Enum (Option_Positioned) | Literal keyword. | `positioned`<br>[enum reference](#static-enum-optionpositioned-77) |
    | 2 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
    | 3 | `chainedCommand` | Yes | Command | Nested command to execute. | `/say hello`, `/tp @s ~ ~1 ~` |
 
 5. `/execute positioned as <origin> <command>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `subcommand` | Yes | Static Enum (Option_Positioned) | Literal keyword. | `positioned`<br>[enum reference](#enum-static-77) |
-   | 2 | `secondary subcommand` | Yes | Static Enum (Option_As) | Literal keyword. | `as`<br>[enum reference](#enum-static-74) |
+   | 1 | `subcommand` | Yes | Static Enum (Option_Positioned) | Literal keyword. | `positioned`<br>[enum reference](#static-enum-optionpositioned-77) |
+   | 2 | `secondary subcommand` | Yes | Static Enum (Option_As) | Literal keyword. | `as`<br>[enum reference](#static-enum-optionas-74) |
    | 3 | `origin` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
    | 4 | `chainedCommand` | Yes | Command | Nested command to execute. | `/say hello`, `/tp @s ~ ~1 ~` |
 
 6. `/execute rotated <yaw> <pitch> <command>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `subcommand` | Yes | Static Enum (Option_Rotated) | Literal keyword. | `rotated`<br>[enum reference](#enum-static-78) |
+   | 1 | `subcommand` | Yes | Static Enum (Option_Rotated) | Literal keyword. | `rotated`<br>[enum reference](#static-enum-optionrotated-78) |
    | 2 | `yaw` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
    | 3 | `pitch` | Yes | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
    | 4 | `chainedCommand` | Yes | Command | Nested command to execute. | `/say hello`, `/tp @s ~ ~1 ~` |
@@ -907,106 +906,106 @@ Executes a command on behalf of one or more entities.
 7. `/execute rotated as <origin> <command>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `subcommand` | Yes | Static Enum (Option_Rotated) | Literal keyword. | `rotated`<br>[enum reference](#enum-static-78) |
-   | 2 | `secondary subcommand` | Yes | Static Enum (Option_As) | Literal keyword. | `as`<br>[enum reference](#enum-static-74) |
+   | 1 | `subcommand` | Yes | Static Enum (Option_Rotated) | Literal keyword. | `rotated`<br>[enum reference](#static-enum-optionrotated-78) |
+   | 2 | `secondary subcommand` | Yes | Static Enum (Option_As) | Literal keyword. | `as`<br>[enum reference](#static-enum-optionas-74) |
    | 3 | `origin` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
    | 4 | `chainedCommand` | Yes | Command | Nested command to execute. | `/say hello`, `/tp @s ~ ~1 ~` |
 
 8. `/execute facing <position> <command>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `subcommand` | Yes | Static Enum (Option_Facing) | Literal keyword. | `facing`<br>[enum reference](#enum-static-79) |
+   | 1 | `subcommand` | Yes | Static Enum (Option_Facing) | Literal keyword. | `facing`<br>[enum reference](#static-enum-optionfacing-79) |
    | 2 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
    | 3 | `chainedCommand` | Yes | Command | Nested command to execute. | `/say hello`, `/tp @s ~ ~1 ~` |
 
 9. `/execute facing entity <origin> <anchor> <command>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `subcommand` | Yes | Static Enum (Option_Facing) | Literal keyword. | `facing`<br>[enum reference](#enum-static-79) |
-   | 2 | `secondary subcommand` | Yes | Static Enum (Option_Entity) | Literal keyword. | `entity`<br>[enum reference](#enum-static-80) |
+   | 1 | `subcommand` | Yes | Static Enum (Option_Facing) | Literal keyword. | `facing`<br>[enum reference](#static-enum-optionfacing-79) |
+   | 2 | `secondary subcommand` | Yes | Static Enum (Option_Entity) | Literal keyword. | `entity`<br>[enum reference](#static-enum-optionentity-80) |
    | 3 | `origin` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 4 | `anchor` | Yes | Static Enum (ActorLocation) | Value from static enum `ActorLocation`. | `eyes`, `feet`<br>[enum reference](#enum-static-89) |
+   | 4 | `anchor` | Yes | Static Enum (ActorLocation) | Value from static enum `ActorLocation`. | `eyes`, `feet`<br>[enum reference](#static-enum-actorlocation-89) |
    | 5 | `chainedCommand` | Yes | Command | Nested command to execute. | `/say hello`, `/tp @s ~ ~1 ~` |
 
 10. `/execute align <axes> <command>`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `subcommand` | Yes | Static Enum (Option_Align) | Literal keyword. | `align`<br>[enum reference](#enum-static-81) |
+    | 1 | `subcommand` | Yes | Static Enum (Option_Align) | Literal keyword. | `align`<br>[enum reference](#static-enum-optionalign-81) |
     | 2 | `axes` | Yes | String (id:56) | Single string token. | `example_text` |
     | 3 | `chainedCommand` | Yes | Command | Nested command to execute. | `/say hello`, `/tp @s ~ ~1 ~` |
 
 11. `/execute anchored <anchored> <command>`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `subcommand` | Yes | Static Enum (Option_Anchored) | Literal keyword. | `anchored`<br>[enum reference](#enum-static-82) |
-    | 2 | `anchored` | Yes | Static Enum (ActorLocation) | Value from static enum `ActorLocation`. | `eyes`, `feet`<br>[enum reference](#enum-static-89) |
+    | 1 | `subcommand` | Yes | Static Enum (Option_Anchored) | Literal keyword. | `anchored`<br>[enum reference](#static-enum-optionanchored-82) |
+    | 2 | `anchored` | Yes | Static Enum (ActorLocation) | Value from static enum `ActorLocation`. | `eyes`, `feet`<br>[enum reference](#static-enum-actorlocation-89) |
     | 3 | `chainedCommand` | Yes | Command | Nested command to execute. | `/say hello`, `/tp @s ~ ~1 ~` |
 
 12. `/execute <subcommand> block <position> <block> [<command>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `subcommand` | Yes | Static Enum (Option_If_Unless) | Value from static enum `Option_If_Unless`. | `if`, `unless`<br>[enum reference](#enum-static-83) |
-    | 2 | `secondary subcommand` | Yes | Static Enum (Option_Condition_Block) | Literal keyword. | `block`<br>[enum reference](#enum-static-84) |
+    | 1 | `subcommand` | Yes | Static Enum (Option_If_Unless) | Value from static enum `Option_If_Unless`. | `if`, `unless`<br>[enum reference](#static-enum-optionifunless-83) |
+    | 2 | `secondary subcommand` | Yes | Static Enum (Option_Condition_Block) | Literal keyword. | `block`<br>[enum reference](#static-enum-optionconditionblock-84) |
     | 3 | `position` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-    | 4 | `block` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#enum-static-24) |
+    | 4 | `block` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#static-enum-block-24) |
     | 5 | `chainedCommand` | No | Command | Nested command to execute. | `/say hello`, `/tp @s ~ ~1 ~` |
 
 13. `/execute <subcommand> block <position> <block> <blockStates> [<command>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `subcommand` | Yes | Static Enum (Option_If_Unless) | Value from static enum `Option_If_Unless`. | `if`, `unless`<br>[enum reference](#enum-static-83) |
-    | 2 | `secondary subcommand` | Yes | Static Enum (Option_Condition_Block) | Literal keyword. | `block`<br>[enum reference](#enum-static-84) |
+    | 1 | `subcommand` | Yes | Static Enum (Option_If_Unless) | Value from static enum `Option_If_Unless`. | `if`, `unless`<br>[enum reference](#static-enum-optionifunless-83) |
+    | 2 | `secondary subcommand` | Yes | Static Enum (Option_Condition_Block) | Literal keyword. | `block`<br>[enum reference](#static-enum-optionconditionblock-84) |
     | 3 | `position` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-    | 4 | `block` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#enum-static-24) |
+    | 4 | `block` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#static-enum-block-24) |
     | 5 | `blockStates` | Yes | Block States (id:84) | Block state expression. | `["facing_direction"=2]`, `{"facing_direction":2}` |
     | 6 | `chainedCommand` | No | Command | Nested command to execute. | `/say hello`, `/tp @s ~ ~1 ~` |
 
 14. `/execute <subcommand> blocks <begin> <end> <destination> <scan_mode> [<command>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `subcommand` | Yes | Static Enum (Option_If_Unless) | Value from static enum `Option_If_Unless`. | `if`, `unless`<br>[enum reference](#enum-static-83) |
-    | 2 | `secondary subcommand` | Yes | Static Enum (Option_Condition_Blocks) | Literal keyword. | `blocks`<br>[enum reference](#enum-static-85) |
+    | 1 | `subcommand` | Yes | Static Enum (Option_If_Unless) | Value from static enum `Option_If_Unless`. | `if`, `unless`<br>[enum reference](#static-enum-optionifunless-83) |
+    | 2 | `secondary subcommand` | Yes | Static Enum (Option_Condition_Blocks) | Literal keyword. | `blocks`<br>[enum reference](#static-enum-optionconditionblocks-85) |
     | 3 | `begin` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
     | 4 | `end` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
     | 5 | `destination` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-    | 6 | `scan mode` | Yes | Static Enum (BlocksScanMode) | Value from static enum `BlocksScanMode`. | `masked`, `all`<br>[enum reference](#enum-static-90) |
+    | 6 | `scan mode` | Yes | Static Enum (BlocksScanMode) | Value from static enum `BlocksScanMode`. | `masked`, `all`<br>[enum reference](#static-enum-blocksscanmode-90) |
     | 7 | `chainedCommand` | No | Command | Nested command to execute. | `/say hello`, `/tp @s ~ ~1 ~` |
 
 15. `/execute <subcommand> entity <target> [<command>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `subcommand` | Yes | Static Enum (Option_If_Unless) | Value from static enum `Option_If_Unless`. | `if`, `unless`<br>[enum reference](#enum-static-83) |
-    | 2 | `secondary subcommand` | Yes | Static Enum (Option_Condition_Entity) | Literal keyword. | `entity`<br>[enum reference](#enum-static-86) |
+    | 1 | `subcommand` | Yes | Static Enum (Option_If_Unless) | Value from static enum `Option_If_Unless`. | `if`, `unless`<br>[enum reference](#static-enum-optionifunless-83) |
+    | 2 | `secondary subcommand` | Yes | Static Enum (Option_Condition_Entity) | Literal keyword. | `entity`<br>[enum reference](#static-enum-optionconditionentity-86) |
     | 3 | `target` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
     | 4 | `chainedCommand` | No | Command | Nested command to execute. | `/say hello`, `/tp @s ~ ~1 ~` |
 
 16. `/execute <subcommand> score <target> <objective> <operation> <source> <objective> [<command>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `subcommand` | Yes | Static Enum (Option_If_Unless) | Value from static enum `Option_If_Unless`. | `if`, `unless`<br>[enum reference](#enum-static-83) |
-    | 2 | `secondary subcommand` | Yes | Static Enum (Option_Condition_Score) | Literal keyword. | `score`<br>[enum reference](#enum-static-87) |
+    | 1 | `subcommand` | Yes | Static Enum (Option_If_Unless) | Value from static enum `Option_If_Unless`. | `if`, `unless`<br>[enum reference](#static-enum-optionifunless-83) |
+    | 2 | `secondary subcommand` | Yes | Static Enum (Option_Condition_Score) | Literal keyword. | `score`<br>[enum reference](#static-enum-optionconditionscore-87) |
     | 3 | `target` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 4 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#enum-dynamic-0) |
+    | 4 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#dynamic-enum-scoreboardobjectives-0) |
     | 5 | `operation` | Yes | Score Operator (id:7) | Score operation operator. | `+=`, `-=`, `*=`, `/=`, `%=`, `=`, `<`, `>`, `<>` |
     | 6 | `source` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 7 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#enum-dynamic-0) |
+    | 7 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#dynamic-enum-scoreboardobjectives-0) |
     | 8 | `chainedCommand` | No | Command | Nested command to execute. | `/say hello`, `/tp @s ~ ~1 ~` |
 
 17. `/execute <subcommand> score <target> <objective> matches <range> [<command>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `subcommand` | Yes | Static Enum (Option_If_Unless) | Value from static enum `Option_If_Unless`. | `if`, `unless`<br>[enum reference](#enum-static-83) |
-    | 2 | `secondary subcommand` | Yes | Static Enum (Option_Condition_Score) | Literal keyword. | `score`<br>[enum reference](#enum-static-87) |
+    | 1 | `subcommand` | Yes | Static Enum (Option_If_Unless) | Value from static enum `Option_If_Unless`. | `if`, `unless`<br>[enum reference](#static-enum-optionifunless-83) |
+    | 2 | `secondary subcommand` | Yes | Static Enum (Option_Condition_Score) | Literal keyword. | `score`<br>[enum reference](#static-enum-optionconditionscore-87) |
     | 3 | `target` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 4 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#enum-dynamic-0) |
-    | 5 | `matches` | Yes | Static Enum (ScoreRangeMode) | Literal keyword. | `matches`<br>[enum reference](#enum-static-91) |
+    | 4 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#dynamic-enum-scoreboardobjectives-0) |
+    | 5 | `matches` | Yes | Static Enum (ScoreRangeMode) | Literal keyword. | `matches`<br>[enum reference](#static-enum-scorerangemode-91) |
     | 6 | `range` | Yes | Range (id:23) | Range expression. | `10`, `5..`, `..20`, `5..20` |
     | 7 | `chainedCommand` | No | Command | Nested command to execute. | `/say hello`, `/tp @s ~ ~1 ~` |
 
 18. `/execute run <command>`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `subcommand` | Yes | Static Enum (Option_Run) | Literal keyword. | `run`<br>[enum reference](#enum-static-88) |
+    | 1 | `subcommand` | Yes | Static Enum (Option_Run) | Literal keyword. | `run`<br>[enum reference](#static-enum-optionrun-88) |
     | 2 | `command` | Yes | Command (id:87) | Nested command string. | `/say hello` |
 
 ### /fill
@@ -1020,27 +1019,27 @@ Fills all or parts of a region with a specific block.
    | --- | --- | --- | --- | --- | --- |
    | 1 | `from` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 2 | `to` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 3 | `tileName` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#enum-static-24) |
+   | 3 | `tileName` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#static-enum-block-24) |
    | 4 | `blockStates` | Yes | Block States (id:84) | Block state expression. | `["facing_direction"=2]`, `{"facing_direction":2}` |
-   | 5 | `oldBlockHandling` | No | Static Enum (FillMode) | Value from static enum `FillMode`. | `outline`, `hollow`, `destroy`, `keep`<br>[enum reference](#enum-static-92) |
+   | 5 | `oldBlockHandling` | No | Static Enum (FillMode) | Value from static enum `FillMode`. | `outline`, `hollow`, `destroy`, `keep`<br>[enum reference](#static-enum-fillmode-92) |
 
 2. `/fill <from> <to> <tileName> [<oldBlockHandling>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `from` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 2 | `to` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 3 | `tileName` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#enum-static-24) |
-   | 4 | `oldBlockHandling` | No | Static Enum (FillMode) | Value from static enum `FillMode`. | `outline`, `hollow`, `destroy`, `keep`<br>[enum reference](#enum-static-92) |
+   | 3 | `tileName` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#static-enum-block-24) |
+   | 4 | `oldBlockHandling` | No | Static Enum (FillMode) | Value from static enum `FillMode`. | `outline`, `hollow`, `destroy`, `keep`<br>[enum reference](#static-enum-fillmode-92) |
 
 3. `/fill <from> <to> <tileName> <blockStates> replace [<replaceTileName>] [<replaceBlockStates>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `from` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 2 | `to` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 3 | `tileName` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#enum-static-24) |
+   | 3 | `tileName` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#static-enum-block-24) |
    | 4 | `blockStates` | Yes | Block States (id:84) | Block state expression. | `["facing_direction"=2]`, `{"facing_direction":2}` |
-   | 5 | `oldBlockHandling` | Yes | Static Enum (Replace) | Literal keyword. | `replace`<br>[enum reference](#enum-static-93) |
-   | 6 | `replaceTileName` | No | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#enum-static-24) |
+   | 5 | `oldBlockHandling` | Yes | Static Enum (Replace) | Literal keyword. | `replace`<br>[enum reference](#static-enum-replace-93) |
+   | 6 | `replaceTileName` | No | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#static-enum-block-24) |
    | 7 | `replaceBlockStates` | No | Block States (id:84) | Block state expression. | `["facing_direction"=2]`, `{"facing_direction":2}` |
 
 4. `/fill <from> <to> <tileName> replace [<replaceTileName>] [<replaceBlockStates>]`
@@ -1048,9 +1047,9 @@ Fills all or parts of a region with a specific block.
    | --- | --- | --- | --- | --- | --- |
    | 1 | `from` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 2 | `to` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 3 | `tileName` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#enum-static-24) |
-   | 4 | `oldBlockHandling` | Yes | Static Enum (Replace) | Literal keyword. | `replace`<br>[enum reference](#enum-static-93) |
-   | 5 | `replaceTileName` | No | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#enum-static-24) |
+   | 3 | `tileName` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#static-enum-block-24) |
+   | 4 | `oldBlockHandling` | Yes | Static Enum (Replace) | Literal keyword. | `replace`<br>[enum reference](#static-enum-replace-93) |
+   | 5 | `replaceTileName` | No | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#static-enum-block-24) |
    | 6 | `replaceBlockStates` | No | Block States (id:84) | Block state expression. | `["facing_direction"=2]`, `{"facing_direction":2}` |
 
 ### /fog
@@ -1063,7 +1062,7 @@ Add or remove fog settings file
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `victim` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `mode` | Yes | Static Enum (add) | Literal keyword. | `push`<br>[enum reference](#enum-static-94) |
+   | 2 | `mode` | Yes | Static Enum (add) | Literal keyword. | `push`<br>[enum reference](#static-enum-add-94) |
    | 3 | `fogId` | Yes | String (id:56) | Single string token. | `example_text` |
    | 4 | `userProvidedId` | Yes | String (id:56) | Single string token. | `example_text` |
 
@@ -1071,7 +1070,7 @@ Add or remove fog settings file
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `victim` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `mode` | Yes | Static Enum (delete) | Value from static enum `delete`. | `pop`, `remove`<br>[enum reference](#enum-static-95) |
+   | 2 | `mode` | Yes | Static Enum (delete) | Value from static enum `delete`. | `pop`, `remove`<br>[enum reference](#static-enum-delete-95) |
    | 3 | `userProvidedId` | Yes | String (id:56) | Single string token. | `example_text` |
 
 ### /function
@@ -1094,7 +1093,7 @@ Sets a player's game mode.
 1. `/gamemode <gameMode> [<player>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `gameMode` | Yes | Static Enum (GameMode) | Value from static enum `GameMode`. | `default`, `creative`, `spectator`, `survival`, `adventure`, `d`, `c`, `s`, `a`<br>[enum reference](#enum-static-0) |
+   | 1 | `gameMode` | Yes | Static Enum (GameMode) | Value from static enum `GameMode`. | `default`, `creative`, `spectator`, `survival`, `adventure`, `d`, `c`, `s`, `a`<br>[enum reference](#static-enum-gamemode-0) |
    | 2 | `player` | No | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
 
 2. `/gamemode <gameMode> [<player>]`
@@ -1114,13 +1113,13 @@ Sets or queries a game rule value.
 2. `/gamerule <rule> [<value>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `rule` | Yes | Static Enum (BoolGameRule) | Value from static enum `BoolGameRule`. | `commandblockoutput`, `dodaylightcycle`, `doentitydrops`, `dofiretick`, `recipesunlock`, `dolimitedcrafting`, `domobloot`, `domobspawning`, `dotiledrops`, `doweathercycle` ... (33 total)<br>[enum reference](#enum-static-96) |
-   | 2 | `value` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 1 | `rule` | Yes | Static Enum (BoolGameRule) | Value from static enum `BoolGameRule`. | `commandblockoutput`, `dodaylightcycle`, `doentitydrops`, `dofiretick`, `recipesunlock`, `dolimitedcrafting`, `domobloot`, `domobspawning`, `dotiledrops`, `doweathercycle` ... (33 total)<br>[enum reference](#static-enum-boolgamerule-96) |
+   | 2 | `value` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 3. `/gamerule <rule> [<value>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `rule` | Yes | Static Enum (IntGameRule) | Value from static enum `IntGameRule`. | `maxcommandchainlength`, `randomtickspeed`, `functioncommandlimit`, `spawnradius`, `playerssleepingpercentage`<br>[enum reference](#enum-static-97) |
+   | 1 | `rule` | Yes | Static Enum (IntGameRule) | Value from static enum `IntGameRule`. | `maxcommandchainlength`, `randomtickspeed`, `functioncommandlimit`, `spawnradius`, `playerssleepingpercentage`<br>[enum reference](#static-enum-intgamerule-97) |
    | 2 | `value` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
 
 ### /gametest
@@ -1132,52 +1131,52 @@ Interacts with gametest.
 1. `/gametest runthis`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (GameTestModeRunThis) | Literal keyword. | `runthis`<br>[enum reference](#enum-static-99) |
+   | 1 | `mode` | Yes | Static Enum (GameTestModeRunThis) | Literal keyword. | `runthis`<br>[enum reference](#static-enum-gametestmoderunthis-99) |
 
 2. `/gametest run <testName> [<rotationSteps>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (GameTestModeRun) | Literal keyword. | `run`<br>[enum reference](#enum-static-98) |
-   | 2 | `testName` | Yes | Dynamic Enum (GameTestName) | Runtime or registry-backed value from dynamic enum `GameTestName`. | [enum reference](#enum-dynamic-9) |
+   | 1 | `mode` | Yes | Static Enum (GameTestModeRun) | Literal keyword. | `run`<br>[enum reference](#static-enum-gametestmoderun-98) |
+   | 2 | `testName` | Yes | Dynamic Enum (GameTestName) | Runtime or registry-backed value from dynamic enum `GameTestName`. | [enum reference](#dynamic-enum-gametestname-9) |
    | 3 | `rotationSteps` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
 
 3. `/gametest run <testName> <stopOnFailure> <repeatCount> [<rotationSteps>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (GameTestModeRun) | Literal keyword. | `run`<br>[enum reference](#enum-static-98) |
-   | 2 | `testName` | Yes | Dynamic Enum (GameTestName) | Runtime or registry-backed value from dynamic enum `GameTestName`. | [enum reference](#enum-dynamic-9) |
-   | 3 | `stopOnFailure` | Yes | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 1 | `mode` | Yes | Static Enum (GameTestModeRun) | Literal keyword. | `run`<br>[enum reference](#static-enum-gametestmoderun-98) |
+   | 2 | `testName` | Yes | Dynamic Enum (GameTestName) | Runtime or registry-backed value from dynamic enum `GameTestName`. | [enum reference](#dynamic-enum-gametestname-9) |
+   | 3 | `stopOnFailure` | Yes | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
    | 4 | `repeatCount` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 5 | `rotationSteps` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
 
 4. `/gametest runset [<tag>] [<rotationSteps>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (GameTestModeRunSet) | Literal keyword. | `runset`<br>[enum reference](#enum-static-100) |
-   | 2 | `tag` | No | Dynamic Enum (GameTestTag) | Runtime or registry-backed value from dynamic enum `GameTestTag`. | [enum reference](#enum-dynamic-10) |
+   | 1 | `mode` | Yes | Static Enum (GameTestModeRunSet) | Literal keyword. | `runset`<br>[enum reference](#static-enum-gametestmoderunset-100) |
+   | 2 | `tag` | No | Dynamic Enum (GameTestTag) | Runtime or registry-backed value from dynamic enum `GameTestTag`. | [enum reference](#dynamic-enum-gametesttag-10) |
    | 3 | `rotationSteps` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
 
 5. `/gametest runsetuntilfail [<tag>] [<rotationSteps>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (GameTestModeRunSetUntilFail) | Literal keyword. | `runsetuntilfail`<br>[enum reference](#enum-static-101) |
-   | 2 | `tag` | No | Dynamic Enum (GameTestTag) | Runtime or registry-backed value from dynamic enum `GameTestTag`. | [enum reference](#enum-dynamic-10) |
+   | 1 | `mode` | Yes | Static Enum (GameTestModeRunSetUntilFail) | Literal keyword. | `runsetuntilfail`<br>[enum reference](#static-enum-gametestmoderunsetuntilfail-101) |
+   | 2 | `tag` | No | Dynamic Enum (GameTestTag) | Runtime or registry-backed value from dynamic enum `GameTestTag`. | [enum reference](#dynamic-enum-gametesttag-10) |
    | 3 | `rotationSteps` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
 
 6. `/gametest clearall`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (GameTestModeClearAll) | Literal keyword. | `clearall`<br>[enum reference](#enum-static-102) |
+   | 1 | `mode` | Yes | Static Enum (GameTestModeClearAll) | Literal keyword. | `clearall`<br>[enum reference](#static-enum-gametestmodeclearall-102) |
 
 7. `/gametest pos`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (GameTestModeShowPosition) | Literal keyword. | `pos`<br>[enum reference](#enum-static-103) |
+   | 1 | `mode` | Yes | Static Enum (GameTestModeShowPosition) | Literal keyword. | `pos`<br>[enum reference](#static-enum-gametestmodeshowposition-103) |
 
 8. `/gametest create <testName> [<width>] [<height>] [<depth>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (GameTestModeCreateTest) | Literal keyword. | `create`<br>[enum reference](#enum-static-104) |
+   | 1 | `mode` | Yes | Static Enum (GameTestModeCreateTest) | Literal keyword. | `create`<br>[enum reference](#static-enum-gametestmodecreatetest-104) |
    | 2 | `testName` | Yes | String (id:56) | Single string token. | `example_text` |
    | 3 | `width` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 4 | `height` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
@@ -1186,12 +1185,12 @@ Interacts with gametest.
 9. `/gametest runthese`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (GameTestRunNearbyTests) | Literal keyword. | `runthese`<br>[enum reference](#enum-static-105) |
+   | 1 | `mode` | Yes | Static Enum (GameTestRunNearbyTests) | Literal keyword. | `runthese`<br>[enum reference](#static-enum-gametestrunnearbytests-105) |
 
 10. `/gametest stopall`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `mode` | Yes | Static Enum (GameTestStopTests) | Literal keyword. | `stopall`<br>[enum reference](#enum-static-106) |
+    | 1 | `mode` | Yes | Static Enum (GameTestStopTests) | Literal keyword. | `stopall`<br>[enum reference](#static-enum-gameteststoptests-106) |
 
 ### /give
 
@@ -1203,7 +1202,7 @@ Gives an item to a player.
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `itemName` | Yes | Static Enum (Item) | Value from static enum `Item`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:polished_basalt`, `polished_basalt`, `minecraft:nether_gold_ore`, `nether_gold_ore` ... (3399 total)<br>[enum reference](#enum-static-9) |
+   | 2 | `itemName` | Yes | Static Enum (Item) | Value from static enum `Item`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:polished_basalt`, `polished_basalt`, `minecraft:nether_gold_ore`, `nether_gold_ore` ... (3399 total)<br>[enum reference](#static-enum-item-9) |
    | 3 | `amount` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 4 | `data` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 5 | `components` | No | JSON (id:74) | JSON object/string (components or raw text payload). | `{"text":"Hello"}` |
@@ -1218,8 +1217,8 @@ Changes the visibility of hud elements.
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `target` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `visible` | Yes | Static Enum (HudVisibility) | Value from static enum `HudVisibility`. | `hide`, `reset`<br>[enum reference](#enum-static-109) |
-   | 3 | `hud_element` | No | Static Enum (HudElement) | Value from static enum `HudElement`. | `hunger`, `all`, `paperdoll`, `armor`, `tooltips`, `touch_controls`, `crosshair`, `hotbar`, `health`, `progress_bar` ... (14 total)<br>[enum reference](#enum-static-108) |
+   | 2 | `visible` | Yes | Static Enum (HudVisibility) | Value from static enum `HudVisibility`. | `hide`, `reset`<br>[enum reference](#static-enum-hudvisibility-109) |
+   | 3 | `hud_element` | No | Static Enum (HudElement) | Value from static enum `HudElement`. | `hunger`, `all`, `paperdoll`, `armor`, `tooltips`, `touch_controls`, `crosshair`, `hotbar`, `health`, `progress_bar` ... (14 total)<br>[enum reference](#static-enum-hudelement-108) |
 
 ### /inputpermission
 
@@ -1230,18 +1229,18 @@ Sets whether or not a player's input can affect their character.
 1. `/inputpermission set <targets> <permission> <state>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `option` | Yes | Static Enum (Option_Set) | Literal keyword. | `set`<br>[enum reference](#enum-static-110) |
+   | 1 | `option` | Yes | Static Enum (Option_Set) | Literal keyword. | `set`<br>[enum reference](#static-enum-optionset-110) |
    | 2 | `targets` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 3 | `permission` | Yes | Static Enum (permission) | Value from static enum `permission`. | `camera`, `movement`, `jump`, `lateral_movement`, `sneak`, `dismount`, `mount`, `move_backward`, `move_forward`, `move_left` ... (11 total)<br>[enum reference](#enum-static-112) |
-   | 4 | `state` | Yes | Static Enum (state) | Value from static enum `state`. | `enabled`, `disabled`<br>[enum reference](#enum-static-113) |
+   | 3 | `permission` | Yes | Static Enum (permission) | Value from static enum `permission`. | `camera`, `movement`, `jump`, `lateral_movement`, `sneak`, `dismount`, `mount`, `move_backward`, `move_forward`, `move_left` ... (11 total)<br>[enum reference](#static-enum-permission-112) |
+   | 4 | `state` | Yes | Static Enum (state) | Value from static enum `state`. | `enabled`, `disabled`<br>[enum reference](#static-enum-state-113) |
 
 2. `/inputpermission query <targets> <permission> [<state>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `option` | Yes | Static Enum (Option_Query) | Literal keyword. | `query`<br>[enum reference](#enum-static-111) |
+   | 1 | `option` | Yes | Static Enum (Option_Query) | Literal keyword. | `query`<br>[enum reference](#static-enum-optionquery-111) |
    | 2 | `targets` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 3 | `permission` | Yes | Static Enum (permission) | Value from static enum `permission`. | `camera`, `movement`, `jump`, `lateral_movement`, `sneak`, `dismount`, `mount`, `move_backward`, `move_forward`, `move_left` ... (11 total)<br>[enum reference](#enum-static-112) |
-   | 4 | `state` | No | Static Enum (state) | Value from static enum `state`. | `enabled`, `disabled`<br>[enum reference](#enum-static-113) |
+   | 3 | `permission` | Yes | Static Enum (permission) | Value from static enum `permission`. | `camera`, `movement`, `jump`, `lateral_movement`, `sneak`, `dismount`, `mount`, `move_backward`, `move_forward`, `move_left` ... (11 total)<br>[enum reference](#static-enum-permission-112) |
+   | 4 | `state` | No | Static Enum (state) | Value from static enum `state`. | `enabled`, `disabled`<br>[enum reference](#static-enum-state-113) |
 
 ### /kick
 
@@ -1284,15 +1283,15 @@ Displays the coordinates for the closest structure or biome of a given type.
 1. `/locate structure <structure> [<useNewChunksOnly>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `subcommand` | Yes | Static Enum (LocateSubcommandStructure) | Literal keyword. | `structure`<br>[enum reference](#enum-static-115) |
-   | 2 | `structure` | Yes | Dynamic Enum (StructureFeature) | Runtime or registry-backed value from dynamic enum `StructureFeature`. | `minecraft:end_city`, `minecraft:fortress`, `minecraft:mineshaft`, `minecraft:monument`, `minecraft:stronghold`, `minecraft:temple`, `minecraft:village`, `minecraft:mansion`, `minecraft:shipwreck`, `minecraft:buried_treasure` ... (17 total)<br>[enum reference](#enum-dynamic-5) |
-   | 3 | `useNewChunksOnly` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 1 | `subcommand` | Yes | Static Enum (LocateSubcommandStructure) | Literal keyword. | `structure`<br>[enum reference](#static-enum-locatesubcommandstructure-115) |
+   | 2 | `structure` | Yes | Dynamic Enum (StructureFeature) | Runtime or registry-backed value from dynamic enum `StructureFeature`. | `minecraft:end_city`, `minecraft:fortress`, `minecraft:mineshaft`, `minecraft:monument`, `minecraft:stronghold`, `minecraft:temple`, `minecraft:village`, `minecraft:mansion`, `minecraft:shipwreck`, `minecraft:buried_treasure` ... (17 total)<br>[enum reference](#dynamic-enum-structurefeature-5) |
+   | 3 | `useNewChunksOnly` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 2. `/locate biome <biome>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `subcommand` | Yes | Static Enum (LocateSubcommandBiome) | Literal keyword. | `biome`<br>[enum reference](#enum-static-116) |
-   | 2 | `biome` | Yes | Static Enum (Biome) | Value from static enum `Biome`. | `minecraft:ocean`, `minecraft:plains`, `minecraft:desert`, `minecraft:extreme_hills`, `minecraft:forest`, `minecraft:taiga`, `minecraft:swampland`, `minecraft:river`, `minecraft:hell`, `minecraft:the_end` ... (86 total)<br>[enum reference](#enum-static-28) |
+   | 1 | `subcommand` | Yes | Static Enum (LocateSubcommandBiome) | Literal keyword. | `biome`<br>[enum reference](#static-enum-locatesubcommandbiome-116) |
+   | 2 | `biome` | Yes | Static Enum (Biome) | Value from static enum `Biome`. | `minecraft:ocean`, `minecraft:plains`, `minecraft:desert`, `minecraft:extreme_hills`, `minecraft:forest`, `minecraft:taiga`, `minecraft:swampland`, `minecraft:river`, `minecraft:hell`, `minecraft:the_end` ... (86 total)<br>[enum reference](#static-enum-biome-28) |
 
 ### /loot
 
@@ -1303,233 +1302,233 @@ Drops the given loot table into the specified inventory or into the world.
 1. `/loot spawn <position> loot <loot_table> [<tool_or_mainhand_or_offhand>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `target` | Yes | Static Enum (TargetSpawn) | Literal keyword. | `spawn`<br>[enum reference](#enum-static-117) |
+   | 1 | `target` | Yes | Static Enum (TargetSpawn) | Literal keyword. | `spawn`<br>[enum reference](#static-enum-targetspawn-117) |
    | 2 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 3 | `source` | Yes | Static Enum (SourceLoot) | Literal keyword. | `loot`<br>[enum reference](#enum-static-123) |
+   | 3 | `source` | Yes | Static Enum (SourceLoot) | Literal keyword. | `loot`<br>[enum reference](#static-enum-sourceloot-123) |
    | 4 | `loot_table` | Yes | String (id:56) | Single string token. | `example_text` |
-   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 2. `/loot spawn <position> kill <entity> [<tool_or_mainhand_or_offhand>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `target` | Yes | Static Enum (TargetSpawn) | Literal keyword. | `spawn`<br>[enum reference](#enum-static-117) |
+   | 1 | `target` | Yes | Static Enum (TargetSpawn) | Literal keyword. | `spawn`<br>[enum reference](#static-enum-targetspawn-117) |
    | 2 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 3 | `source` | Yes | Static Enum (SourceKill) | Literal keyword. | `kill`<br>[enum reference](#enum-static-124) |
+   | 3 | `source` | Yes | Static Enum (SourceKill) | Literal keyword. | `kill`<br>[enum reference](#static-enum-sourcekill-124) |
    | 4 | `entity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 3. `/loot spawn <position> mine <TargetBlockPosition> [<tool_or_mainhand_or_offhand>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `target` | Yes | Static Enum (TargetSpawn) | Literal keyword. | `spawn`<br>[enum reference](#enum-static-117) |
+   | 1 | `target` | Yes | Static Enum (TargetSpawn) | Literal keyword. | `spawn`<br>[enum reference](#static-enum-targetspawn-117) |
    | 2 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 3 | `source` | Yes | Static Enum (SourceMine) | Literal keyword. | `mine`<br>[enum reference](#enum-static-125) |
+   | 3 | `source` | Yes | Static Enum (SourceMine) | Literal keyword. | `mine`<br>[enum reference](#static-enum-sourcemine-125) |
    | 4 | `TargetBlockPosition` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 4. `/loot give <players> loot <loot_table> [<tool_or_mainhand_or_offhand>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `target` | Yes | Static Enum (TargetGive) | Literal keyword. | `give`<br>[enum reference](#enum-static-118) |
+   | 1 | `target` | Yes | Static Enum (TargetGive) | Literal keyword. | `give`<br>[enum reference](#static-enum-targetgive-118) |
    | 2 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 3 | `source` | Yes | Static Enum (SourceLoot) | Literal keyword. | `loot`<br>[enum reference](#enum-static-123) |
+   | 3 | `source` | Yes | Static Enum (SourceLoot) | Literal keyword. | `loot`<br>[enum reference](#static-enum-sourceloot-123) |
    | 4 | `loot_table` | Yes | String (id:56) | Single string token. | `example_text` |
-   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 5. `/loot give <players> kill <entity> [<tool_or_mainhand_or_offhand>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `target` | Yes | Static Enum (TargetGive) | Literal keyword. | `give`<br>[enum reference](#enum-static-118) |
+   | 1 | `target` | Yes | Static Enum (TargetGive) | Literal keyword. | `give`<br>[enum reference](#static-enum-targetgive-118) |
    | 2 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 3 | `source` | Yes | Static Enum (SourceKill) | Literal keyword. | `kill`<br>[enum reference](#enum-static-124) |
+   | 3 | `source` | Yes | Static Enum (SourceKill) | Literal keyword. | `kill`<br>[enum reference](#static-enum-sourcekill-124) |
    | 4 | `entity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 6. `/loot give <players> mine <TargetBlockPosition> [<tool_or_mainhand_or_offhand>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `target` | Yes | Static Enum (TargetGive) | Literal keyword. | `give`<br>[enum reference](#enum-static-118) |
+   | 1 | `target` | Yes | Static Enum (TargetGive) | Literal keyword. | `give`<br>[enum reference](#static-enum-targetgive-118) |
    | 2 | `players` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 3 | `source` | Yes | Static Enum (SourceMine) | Literal keyword. | `mine`<br>[enum reference](#enum-static-125) |
+   | 3 | `source` | Yes | Static Enum (SourceMine) | Literal keyword. | `mine`<br>[enum reference](#static-enum-sourcemine-125) |
    | 4 | `TargetBlockPosition` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 7. `/loot insert <position> loot <loot_table> [<tool_or_mainhand_or_offhand>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `target` | Yes | Static Enum (TargetInsert) | Literal keyword. | `insert`<br>[enum reference](#enum-static-119) |
+   | 1 | `target` | Yes | Static Enum (TargetInsert) | Literal keyword. | `insert`<br>[enum reference](#static-enum-targetinsert-119) |
    | 2 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 3 | `source` | Yes | Static Enum (SourceLoot) | Literal keyword. | `loot`<br>[enum reference](#enum-static-123) |
+   | 3 | `source` | Yes | Static Enum (SourceLoot) | Literal keyword. | `loot`<br>[enum reference](#static-enum-sourceloot-123) |
    | 4 | `loot_table` | Yes | String (id:56) | Single string token. | `example_text` |
-   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 8. `/loot insert <position> kill <entity> [<tool_or_mainhand_or_offhand>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `target` | Yes | Static Enum (TargetInsert) | Literal keyword. | `insert`<br>[enum reference](#enum-static-119) |
+   | 1 | `target` | Yes | Static Enum (TargetInsert) | Literal keyword. | `insert`<br>[enum reference](#static-enum-targetinsert-119) |
    | 2 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 3 | `source` | Yes | Static Enum (SourceKill) | Literal keyword. | `kill`<br>[enum reference](#enum-static-124) |
+   | 3 | `source` | Yes | Static Enum (SourceKill) | Literal keyword. | `kill`<br>[enum reference](#static-enum-sourcekill-124) |
    | 4 | `entity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 9. `/loot insert <position> mine <TargetBlockPosition> [<tool_or_mainhand_or_offhand>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `target` | Yes | Static Enum (TargetInsert) | Literal keyword. | `insert`<br>[enum reference](#enum-static-119) |
+   | 1 | `target` | Yes | Static Enum (TargetInsert) | Literal keyword. | `insert`<br>[enum reference](#static-enum-targetinsert-119) |
    | 2 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 3 | `source` | Yes | Static Enum (SourceMine) | Literal keyword. | `mine`<br>[enum reference](#enum-static-125) |
+   | 3 | `source` | Yes | Static Enum (SourceMine) | Literal keyword. | `mine`<br>[enum reference](#static-enum-sourcemine-125) |
    | 4 | `TargetBlockPosition` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+   | 5 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 10. `/loot replace entity <entity> <slotType> <slotId> <count> loot <loot_table> [<tool_or_mainhand_or_offhand>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#enum-static-120) |
-    | 2 | `entity` | Yes | Static Enum (TargetEntity) | Literal keyword. | `entity`<br>[enum reference](#enum-static-121) |
+    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#static-enum-targetreplace-120) |
+    | 2 | `entity` | Yes | Static Enum (TargetEntity) | Literal keyword. | `entity`<br>[enum reference](#static-enum-targetentity-121) |
     | 3 | `entity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 4 | `slotType` | Yes | Static Enum (EntityEquipmentSlot) | Value from static enum `EntityEquipmentSlot`. | `slot.weapon.mainhand`, `slot.weapon.offhand`, `slot.armor.head`, `slot.armor.chest`, `slot.armor.legs`, `slot.armor.feet`, `slot.armor.body`, `slot.hotbar`, `slot.inventory`, `slot.enderchest` ... (14 total)<br>[enum reference](#enum-static-10) |
+    | 4 | `slotType` | Yes | Static Enum (EntityEquipmentSlot) | Value from static enum `EntityEquipmentSlot`. | `slot.weapon.mainhand`, `slot.weapon.offhand`, `slot.armor.head`, `slot.armor.chest`, `slot.armor.legs`, `slot.armor.feet`, `slot.armor.body`, `slot.hotbar`, `slot.inventory`, `slot.enderchest` ... (14 total)<br>[enum reference](#static-enum-entityequipmentslot-10) |
     | 5 | `slotId` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
     | 6 | `count` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-    | 7 | `source` | Yes | Static Enum (SourceLoot) | Literal keyword. | `loot`<br>[enum reference](#enum-static-123) |
+    | 7 | `source` | Yes | Static Enum (SourceLoot) | Literal keyword. | `loot`<br>[enum reference](#static-enum-sourceloot-123) |
     | 8 | `loot_table` | Yes | String (id:56) | Single string token. | `example_text` |
-    | 9 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+    | 9 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 11. `/loot replace entity <entity> <slotType> <slotId> loot <loot_table> [<tool_or_mainhand_or_offhand>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#enum-static-120) |
-    | 2 | `entity` | Yes | Static Enum (TargetEntity) | Literal keyword. | `entity`<br>[enum reference](#enum-static-121) |
+    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#static-enum-targetreplace-120) |
+    | 2 | `entity` | Yes | Static Enum (TargetEntity) | Literal keyword. | `entity`<br>[enum reference](#static-enum-targetentity-121) |
     | 3 | `entity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 4 | `slotType` | Yes | Static Enum (EntityEquipmentSlot) | Value from static enum `EntityEquipmentSlot`. | `slot.weapon.mainhand`, `slot.weapon.offhand`, `slot.armor.head`, `slot.armor.chest`, `slot.armor.legs`, `slot.armor.feet`, `slot.armor.body`, `slot.hotbar`, `slot.inventory`, `slot.enderchest` ... (14 total)<br>[enum reference](#enum-static-10) |
+    | 4 | `slotType` | Yes | Static Enum (EntityEquipmentSlot) | Value from static enum `EntityEquipmentSlot`. | `slot.weapon.mainhand`, `slot.weapon.offhand`, `slot.armor.head`, `slot.armor.chest`, `slot.armor.legs`, `slot.armor.feet`, `slot.armor.body`, `slot.hotbar`, `slot.inventory`, `slot.enderchest` ... (14 total)<br>[enum reference](#static-enum-entityequipmentslot-10) |
     | 5 | `slotId` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-    | 6 | `source` | Yes | Static Enum (SourceLoot) | Literal keyword. | `loot`<br>[enum reference](#enum-static-123) |
+    | 6 | `source` | Yes | Static Enum (SourceLoot) | Literal keyword. | `loot`<br>[enum reference](#static-enum-sourceloot-123) |
     | 7 | `loot_table` | Yes | String (id:56) | Single string token. | `example_text` |
-    | 8 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+    | 8 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 12. `/loot replace entity <entity> <slotType> <slotId> <count> kill <entity> [<tool_or_mainhand_or_offhand>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#enum-static-120) |
-    | 2 | `entity` | Yes | Static Enum (TargetEntity) | Literal keyword. | `entity`<br>[enum reference](#enum-static-121) |
+    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#static-enum-targetreplace-120) |
+    | 2 | `entity` | Yes | Static Enum (TargetEntity) | Literal keyword. | `entity`<br>[enum reference](#static-enum-targetentity-121) |
     | 3 | `entity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 4 | `slotType` | Yes | Static Enum (EntityEquipmentSlot) | Value from static enum `EntityEquipmentSlot`. | `slot.weapon.mainhand`, `slot.weapon.offhand`, `slot.armor.head`, `slot.armor.chest`, `slot.armor.legs`, `slot.armor.feet`, `slot.armor.body`, `slot.hotbar`, `slot.inventory`, `slot.enderchest` ... (14 total)<br>[enum reference](#enum-static-10) |
+    | 4 | `slotType` | Yes | Static Enum (EntityEquipmentSlot) | Value from static enum `EntityEquipmentSlot`. | `slot.weapon.mainhand`, `slot.weapon.offhand`, `slot.armor.head`, `slot.armor.chest`, `slot.armor.legs`, `slot.armor.feet`, `slot.armor.body`, `slot.hotbar`, `slot.inventory`, `slot.enderchest` ... (14 total)<br>[enum reference](#static-enum-entityequipmentslot-10) |
     | 5 | `slotId` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
     | 6 | `count` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-    | 7 | `source` | Yes | Static Enum (SourceKill) | Literal keyword. | `kill`<br>[enum reference](#enum-static-124) |
+    | 7 | `source` | Yes | Static Enum (SourceKill) | Literal keyword. | `kill`<br>[enum reference](#static-enum-sourcekill-124) |
     | 8 | `entity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 9 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+    | 9 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 13. `/loot replace entity <entity> <slotType> <slotId> kill <entity> [<tool_or_mainhand_or_offhand>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#enum-static-120) |
-    | 2 | `entity` | Yes | Static Enum (TargetEntity) | Literal keyword. | `entity`<br>[enum reference](#enum-static-121) |
+    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#static-enum-targetreplace-120) |
+    | 2 | `entity` | Yes | Static Enum (TargetEntity) | Literal keyword. | `entity`<br>[enum reference](#static-enum-targetentity-121) |
     | 3 | `entity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 4 | `slotType` | Yes | Static Enum (EntityEquipmentSlot) | Value from static enum `EntityEquipmentSlot`. | `slot.weapon.mainhand`, `slot.weapon.offhand`, `slot.armor.head`, `slot.armor.chest`, `slot.armor.legs`, `slot.armor.feet`, `slot.armor.body`, `slot.hotbar`, `slot.inventory`, `slot.enderchest` ... (14 total)<br>[enum reference](#enum-static-10) |
+    | 4 | `slotType` | Yes | Static Enum (EntityEquipmentSlot) | Value from static enum `EntityEquipmentSlot`. | `slot.weapon.mainhand`, `slot.weapon.offhand`, `slot.armor.head`, `slot.armor.chest`, `slot.armor.legs`, `slot.armor.feet`, `slot.armor.body`, `slot.hotbar`, `slot.inventory`, `slot.enderchest` ... (14 total)<br>[enum reference](#static-enum-entityequipmentslot-10) |
     | 5 | `slotId` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-    | 6 | `source` | Yes | Static Enum (SourceKill) | Literal keyword. | `kill`<br>[enum reference](#enum-static-124) |
+    | 6 | `source` | Yes | Static Enum (SourceKill) | Literal keyword. | `kill`<br>[enum reference](#static-enum-sourcekill-124) |
     | 7 | `entity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 8 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+    | 8 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 14. `/loot replace entity <entity> <slotType> <slotId> <count> mine <TargetBlockPosition> [<tool_or_mainhand_or_offhand>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#enum-static-120) |
-    | 2 | `entity` | Yes | Static Enum (TargetEntity) | Literal keyword. | `entity`<br>[enum reference](#enum-static-121) |
+    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#static-enum-targetreplace-120) |
+    | 2 | `entity` | Yes | Static Enum (TargetEntity) | Literal keyword. | `entity`<br>[enum reference](#static-enum-targetentity-121) |
     | 3 | `entity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 4 | `slotType` | Yes | Static Enum (EntityEquipmentSlot) | Value from static enum `EntityEquipmentSlot`. | `slot.weapon.mainhand`, `slot.weapon.offhand`, `slot.armor.head`, `slot.armor.chest`, `slot.armor.legs`, `slot.armor.feet`, `slot.armor.body`, `slot.hotbar`, `slot.inventory`, `slot.enderchest` ... (14 total)<br>[enum reference](#enum-static-10) |
+    | 4 | `slotType` | Yes | Static Enum (EntityEquipmentSlot) | Value from static enum `EntityEquipmentSlot`. | `slot.weapon.mainhand`, `slot.weapon.offhand`, `slot.armor.head`, `slot.armor.chest`, `slot.armor.legs`, `slot.armor.feet`, `slot.armor.body`, `slot.hotbar`, `slot.inventory`, `slot.enderchest` ... (14 total)<br>[enum reference](#static-enum-entityequipmentslot-10) |
     | 5 | `slotId` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
     | 6 | `count` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-    | 7 | `source` | Yes | Static Enum (SourceMine) | Literal keyword. | `mine`<br>[enum reference](#enum-static-125) |
+    | 7 | `source` | Yes | Static Enum (SourceMine) | Literal keyword. | `mine`<br>[enum reference](#static-enum-sourcemine-125) |
     | 8 | `TargetBlockPosition` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-    | 9 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+    | 9 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 15. `/loot replace entity <entity> <slotType> <slotId> mine <TargetBlockPosition> [<tool_or_mainhand_or_offhand>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#enum-static-120) |
-    | 2 | `entity` | Yes | Static Enum (TargetEntity) | Literal keyword. | `entity`<br>[enum reference](#enum-static-121) |
+    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#static-enum-targetreplace-120) |
+    | 2 | `entity` | Yes | Static Enum (TargetEntity) | Literal keyword. | `entity`<br>[enum reference](#static-enum-targetentity-121) |
     | 3 | `entity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 4 | `slotType` | Yes | Static Enum (EntityEquipmentSlot) | Value from static enum `EntityEquipmentSlot`. | `slot.weapon.mainhand`, `slot.weapon.offhand`, `slot.armor.head`, `slot.armor.chest`, `slot.armor.legs`, `slot.armor.feet`, `slot.armor.body`, `slot.hotbar`, `slot.inventory`, `slot.enderchest` ... (14 total)<br>[enum reference](#enum-static-10) |
+    | 4 | `slotType` | Yes | Static Enum (EntityEquipmentSlot) | Value from static enum `EntityEquipmentSlot`. | `slot.weapon.mainhand`, `slot.weapon.offhand`, `slot.armor.head`, `slot.armor.chest`, `slot.armor.legs`, `slot.armor.feet`, `slot.armor.body`, `slot.hotbar`, `slot.inventory`, `slot.enderchest` ... (14 total)<br>[enum reference](#static-enum-entityequipmentslot-10) |
     | 5 | `slotId` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-    | 6 | `source` | Yes | Static Enum (SourceMine) | Literal keyword. | `mine`<br>[enum reference](#enum-static-125) |
+    | 6 | `source` | Yes | Static Enum (SourceMine) | Literal keyword. | `mine`<br>[enum reference](#static-enum-sourcemine-125) |
     | 7 | `TargetBlockPosition` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-    | 8 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+    | 8 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 16. `/loot replace block <position> slot.container <slotId> <count> loot <loot_table> [<tool_or_mainhand_or_offhand>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#enum-static-120) |
-    | 2 | `block` | Yes | Static Enum (TargetBlock) | Literal keyword. | `block`<br>[enum reference](#enum-static-122) |
+    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#static-enum-targetreplace-120) |
+    | 2 | `block` | Yes | Static Enum (TargetBlock) | Literal keyword. | `block`<br>[enum reference](#static-enum-targetblock-122) |
     | 3 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-    | 4 | `slotType` | Yes | Static Enum (BlockEquipmentSlot) | Literal keyword. | `slot.container`<br>[enum reference](#enum-static-126) |
+    | 4 | `slotType` | Yes | Static Enum (BlockEquipmentSlot) | Literal keyword. | `slot.container`<br>[enum reference](#static-enum-blockequipmentslot-126) |
     | 5 | `slotId` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
     | 6 | `count` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-    | 7 | `source` | Yes | Static Enum (SourceLoot) | Literal keyword. | `loot`<br>[enum reference](#enum-static-123) |
+    | 7 | `source` | Yes | Static Enum (SourceLoot) | Literal keyword. | `loot`<br>[enum reference](#static-enum-sourceloot-123) |
     | 8 | `loot_table` | Yes | String (id:56) | Single string token. | `example_text` |
-    | 9 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+    | 9 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 17. `/loot replace block <position> slot.container <slotId> loot <loot_table> [<tool_or_mainhand_or_offhand>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#enum-static-120) |
-    | 2 | `block` | Yes | Static Enum (TargetBlock) | Literal keyword. | `block`<br>[enum reference](#enum-static-122) |
+    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#static-enum-targetreplace-120) |
+    | 2 | `block` | Yes | Static Enum (TargetBlock) | Literal keyword. | `block`<br>[enum reference](#static-enum-targetblock-122) |
     | 3 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-    | 4 | `slotType` | Yes | Static Enum (BlockEquipmentSlot) | Literal keyword. | `slot.container`<br>[enum reference](#enum-static-126) |
+    | 4 | `slotType` | Yes | Static Enum (BlockEquipmentSlot) | Literal keyword. | `slot.container`<br>[enum reference](#static-enum-blockequipmentslot-126) |
     | 5 | `slotId` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-    | 6 | `source` | Yes | Static Enum (SourceLoot) | Literal keyword. | `loot`<br>[enum reference](#enum-static-123) |
+    | 6 | `source` | Yes | Static Enum (SourceLoot) | Literal keyword. | `loot`<br>[enum reference](#static-enum-sourceloot-123) |
     | 7 | `loot_table` | Yes | String (id:56) | Single string token. | `example_text` |
-    | 8 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+    | 8 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 18. `/loot replace block <position> slot.container <slotId> <count> kill <entity> [<tool_or_mainhand_or_offhand>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#enum-static-120) |
-    | 2 | `block` | Yes | Static Enum (TargetBlock) | Literal keyword. | `block`<br>[enum reference](#enum-static-122) |
+    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#static-enum-targetreplace-120) |
+    | 2 | `block` | Yes | Static Enum (TargetBlock) | Literal keyword. | `block`<br>[enum reference](#static-enum-targetblock-122) |
     | 3 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-    | 4 | `slotType` | Yes | Static Enum (BlockEquipmentSlot) | Literal keyword. | `slot.container`<br>[enum reference](#enum-static-126) |
+    | 4 | `slotType` | Yes | Static Enum (BlockEquipmentSlot) | Literal keyword. | `slot.container`<br>[enum reference](#static-enum-blockequipmentslot-126) |
     | 5 | `slotId` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
     | 6 | `count` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-    | 7 | `source` | Yes | Static Enum (SourceKill) | Literal keyword. | `kill`<br>[enum reference](#enum-static-124) |
+    | 7 | `source` | Yes | Static Enum (SourceKill) | Literal keyword. | `kill`<br>[enum reference](#static-enum-sourcekill-124) |
     | 8 | `entity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 9 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+    | 9 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 19. `/loot replace block <position> slot.container <slotId> kill <entity> [<tool_or_mainhand_or_offhand>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#enum-static-120) |
-    | 2 | `block` | Yes | Static Enum (TargetBlock) | Literal keyword. | `block`<br>[enum reference](#enum-static-122) |
+    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#static-enum-targetreplace-120) |
+    | 2 | `block` | Yes | Static Enum (TargetBlock) | Literal keyword. | `block`<br>[enum reference](#static-enum-targetblock-122) |
     | 3 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-    | 4 | `slotType` | Yes | Static Enum (BlockEquipmentSlot) | Literal keyword. | `slot.container`<br>[enum reference](#enum-static-126) |
+    | 4 | `slotType` | Yes | Static Enum (BlockEquipmentSlot) | Literal keyword. | `slot.container`<br>[enum reference](#static-enum-blockequipmentslot-126) |
     | 5 | `slotId` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-    | 6 | `source` | Yes | Static Enum (SourceKill) | Literal keyword. | `kill`<br>[enum reference](#enum-static-124) |
+    | 6 | `source` | Yes | Static Enum (SourceKill) | Literal keyword. | `kill`<br>[enum reference](#static-enum-sourcekill-124) |
     | 7 | `entity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 8 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+    | 8 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 20. `/loot replace block <position> slot.container <slotId> <count> mine <TargetBlockPosition> [<tool_or_mainhand_or_offhand>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#enum-static-120) |
-    | 2 | `block` | Yes | Static Enum (TargetBlock) | Literal keyword. | `block`<br>[enum reference](#enum-static-122) |
+    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#static-enum-targetreplace-120) |
+    | 2 | `block` | Yes | Static Enum (TargetBlock) | Literal keyword. | `block`<br>[enum reference](#static-enum-targetblock-122) |
     | 3 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-    | 4 | `slotType` | Yes | Static Enum (BlockEquipmentSlot) | Literal keyword. | `slot.container`<br>[enum reference](#enum-static-126) |
+    | 4 | `slotType` | Yes | Static Enum (BlockEquipmentSlot) | Literal keyword. | `slot.container`<br>[enum reference](#static-enum-blockequipmentslot-126) |
     | 5 | `slotId` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
     | 6 | `count` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-    | 7 | `source` | Yes | Static Enum (SourceMine) | Literal keyword. | `mine`<br>[enum reference](#enum-static-125) |
+    | 7 | `source` | Yes | Static Enum (SourceMine) | Literal keyword. | `mine`<br>[enum reference](#static-enum-sourcemine-125) |
     | 8 | `TargetBlockPosition` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-    | 9 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+    | 9 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 21. `/loot replace block <position> slot.container <slotId> mine <TargetBlockPosition> [<tool_or_mainhand_or_offhand>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#enum-static-120) |
-    | 2 | `block` | Yes | Static Enum (TargetBlock) | Literal keyword. | `block`<br>[enum reference](#enum-static-122) |
+    | 1 | `target` | Yes | Static Enum (TargetReplace) | Literal keyword. | `replace`<br>[enum reference](#static-enum-targetreplace-120) |
+    | 2 | `block` | Yes | Static Enum (TargetBlock) | Literal keyword. | `block`<br>[enum reference](#static-enum-targetblock-122) |
     | 3 | `position` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-    | 4 | `slotType` | Yes | Static Enum (BlockEquipmentSlot) | Literal keyword. | `slot.container`<br>[enum reference](#enum-static-126) |
+    | 4 | `slotType` | Yes | Static Enum (BlockEquipmentSlot) | Literal keyword. | `slot.container`<br>[enum reference](#static-enum-blockequipmentslot-126) |
     | 5 | `slotId` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-    | 6 | `source` | Yes | Static Enum (SourceMine) | Literal keyword. | `mine`<br>[enum reference](#enum-static-125) |
+    | 6 | `source` | Yes | Static Enum (SourceMine) | Literal keyword. | `mine`<br>[enum reference](#static-enum-sourcemine-125) |
     | 7 | `TargetBlockPosition` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-    | 8 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#enum-dynamic-11) |
+    | 8 | `<tool>\|mainhand\|offhand` | No | Dynamic Enum (Tool) | Runtime or registry-backed value from dynamic enum `Tool`. | `mainhand`, `offhand`, `minecraft:wooden_spear`, `minecraft:bow`, `minecraft:brain_coral_fan`, `minecraft:waxed_exposed_copper_bulb`, `minecraft:purpur_block`, `minecraft:cooked_cod`, `minecraft:music_disc_ward`, `minecraft:enderman_spawn_egg` ... (1907 total)<br>[enum reference](#dynamic-enum-tool-11) |
 
 ### /me
 
@@ -1551,8 +1550,8 @@ Controls what mob events are allowed to run.
 1. `/mobevent <event> [<value>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `event` | Yes | Static Enum (MobEvent) | Value from static enum `MobEvent`. | `minecraft:pillager_patrols_event`, `minecraft:wandering_trader_event`, `minecraft:ender_dragon_event`, `events_enabled`<br>[enum reference](#enum-static-127) |
-   | 2 | `value` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 1 | `event` | Yes | Static Enum (MobEvent) | Value from static enum `MobEvent`. | `minecraft:pillager_patrols_event`, `minecraft:wandering_trader_event`, `minecraft:ender_dragon_event`, `events_enabled`<br>[enum reference](#static-enum-mobevent-127) |
+   | 2 | `value` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 ### /music
 
@@ -1563,31 +1562,31 @@ Allows you to control playing music tracks.
 1. `/music queue <trackName> [<volume>] [<fadeSeconds>] [<repeatMode>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `action` | Yes | Static Enum (MusicQueueAction) | Literal keyword. | `queue`<br>[enum reference](#enum-static-128) |
+   | 1 | `action` | Yes | Static Enum (MusicQueueAction) | Literal keyword. | `queue`<br>[enum reference](#static-enum-musicqueueaction-128) |
    | 2 | `trackName` | Yes | String (id:56) | Single string token. | `example_text` |
    | 3 | `volume` | No | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
    | 4 | `fadeSeconds` | No | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
-   | 5 | `repeatMode` | No | Static Enum (MusicRepeatMode) | Value from static enum `MusicRepeatMode`. | `play_once`, `loop`<br>[enum reference](#enum-static-132) |
+   | 5 | `repeatMode` | No | Static Enum (MusicRepeatMode) | Value from static enum `MusicRepeatMode`. | `play_once`, `loop`<br>[enum reference](#static-enum-musicrepeatmode-132) |
 
 2. `/music play <trackName> [<volume>] [<fadeSeconds>] [<repeatMode>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `action` | Yes | Static Enum (MusicPlayAction) | Literal keyword. | `play`<br>[enum reference](#enum-static-129) |
+   | 1 | `action` | Yes | Static Enum (MusicPlayAction) | Literal keyword. | `play`<br>[enum reference](#static-enum-musicplayaction-129) |
    | 2 | `trackName` | Yes | String (id:56) | Single string token. | `example_text` |
    | 3 | `volume` | No | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
    | 4 | `fadeSeconds` | No | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
-   | 5 | `repeatMode` | No | Static Enum (MusicRepeatMode) | Value from static enum `MusicRepeatMode`. | `play_once`, `loop`<br>[enum reference](#enum-static-132) |
+   | 5 | `repeatMode` | No | Static Enum (MusicRepeatMode) | Value from static enum `MusicRepeatMode`. | `play_once`, `loop`<br>[enum reference](#static-enum-musicrepeatmode-132) |
 
 3. `/music stop [<fadeSeconds>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `action` | Yes | Static Enum (MusicStopAction) | Literal keyword. | `stop`<br>[enum reference](#enum-static-130) |
+   | 1 | `action` | Yes | Static Enum (MusicStopAction) | Literal keyword. | `stop`<br>[enum reference](#static-enum-musicstopaction-130) |
    | 2 | `fadeSeconds` | No | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
 
 4. `/music volume <volume>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `action` | Yes | Static Enum (MusicVolumeAction) | Literal keyword. | `volume`<br>[enum reference](#enum-static-131) |
+   | 1 | `action` | Yes | Static Enum (MusicVolumeAction) | Literal keyword. | `volume`<br>[enum reference](#static-enum-musicvolumeaction-131) |
    | 2 | `volume` | Yes | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
 
 ### /op
@@ -1610,9 +1609,9 @@ Prints client or server pack stack to chat
 1. `/packstack <stackType> [verbose] [exclude-vanilla]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `stackType` | Yes | Static Enum (stackType) | Value from static enum `stackType`. | `server`, `client`<br>[enum reference](#enum-static-133) |
-   | 2 | `verbose` | No | Static Enum (verbose) | Literal keyword. | `verbose`<br>[enum reference](#enum-static-134) |
-   | 3 | `exclude-vanilla` | No | Static Enum (exclude-vanilla) | Literal keyword. | `exclude-vanilla`<br>[enum reference](#enum-static-135) |
+   | 1 | `stackType` | Yes | Static Enum (stackType) | Value from static enum `stackType`. | `server`, `client`<br>[enum reference](#static-enum-stacktype-133) |
+   | 2 | `verbose` | No | Static Enum (verbose) | Literal keyword. | `verbose`<br>[enum reference](#static-enum-verbose-134) |
+   | 3 | `exclude-vanilla` | No | Static Enum (exclude-vanilla) | Literal keyword. | `exclude-vanilla`<br>[enum reference](#static-enum-exclude-vanilla-135) |
 
 ### /particle
 
@@ -1637,7 +1636,7 @@ Reloads and applies permissions.
 1. `/permission <action>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `action` | Yes | Static Enum (PermissionsAction) | Value from static enum `PermissionsAction`. | `list`, `reload`<br>[enum reference](#enum-static-136) |
+   | 1 | `action` | Yes | Static Enum (PermissionsAction) | Value from static enum `PermissionsAction`. | `list`, `reload`<br>[enum reference](#static-enum-permissionsaction-136) |
 
 ### /place
 
@@ -1648,38 +1647,38 @@ Places a jigsaw structure, feature, or feature rule in the world.
 1. `/place structure <structure> [<pos>] [<ignoreStartHeight>] [<keepJigsaws>] [<includeEntities>] [<liquidSettings>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `action` | Yes | Static Enum (PlaceStructureAction) | Literal keyword. | `structure`<br>[enum reference](#enum-static-139) |
-   | 2 | `structure` | Yes | Dynamic Enum (JigsawStructure) | Runtime or registry-backed value from dynamic enum `JigsawStructure`. | `minecraft:trail_ruins`, `minecraft:trial_chambers`<br>[enum reference](#enum-dynamic-6) |
+   | 1 | `action` | Yes | Static Enum (PlaceStructureAction) | Literal keyword. | `structure`<br>[enum reference](#static-enum-placestructureaction-139) |
+   | 2 | `structure` | Yes | Dynamic Enum (JigsawStructure) | Runtime or registry-backed value from dynamic enum `JigsawStructure`. | `minecraft:trail_ruins`, `minecraft:trial_chambers`<br>[enum reference](#dynamic-enum-jigsawstructure-6) |
    | 3 | `pos` | No | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 4 | `ignoreStartHeight` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
-   | 5 | `keepJigsaws` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
-   | 6 | `includeEntities` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
-   | 7 | `liquidSettings` | No | Static Enum (LiquidSettings) | Value from static enum `LiquidSettings`. | `apply_waterlogging`, `ignore_waterlogging`<br>[enum reference](#enum-static-141) |
+   | 4 | `ignoreStartHeight` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
+   | 5 | `keepJigsaws` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
+   | 6 | `includeEntities` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
+   | 7 | `liquidSettings` | No | Static Enum (LiquidSettings) | Value from static enum `LiquidSettings`. | `apply_waterlogging`, `ignore_waterlogging`<br>[enum reference](#static-enum-liquidsettings-141) |
 
 2. `/place jigsaw <pool> <jigsawTarget> <maxDepth> [<pos>] [<keepJigsaws>] [<includeEntities>] [<liquidSettings>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `action` | Yes | Static Enum (PlaceJigsawAction) | Literal keyword. | `jigsaw`<br>[enum reference](#enum-static-140) |
+   | 1 | `action` | Yes | Static Enum (PlaceJigsawAction) | Literal keyword. | `jigsaw`<br>[enum reference](#static-enum-placejigsawaction-140) |
    | 2 | `pool` | Yes | Function Name (id:17) | Behavior-pack function identifier. | `namespace:path/function` |
    | 3 | `jigsawTarget` | Yes | String (id:56) | Single string token. | `example_text` |
    | 4 | `maxDepth` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 5 | `pos` | No | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 6 | `keepJigsaws` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
-   | 7 | `includeEntities` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
-   | 8 | `liquidSettings` | No | Static Enum (LiquidSettings) | Value from static enum `LiquidSettings`. | `apply_waterlogging`, `ignore_waterlogging`<br>[enum reference](#enum-static-141) |
+   | 6 | `keepJigsaws` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
+   | 7 | `includeEntities` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
+   | 8 | `liquidSettings` | No | Static Enum (LiquidSettings) | Value from static enum `LiquidSettings`. | `apply_waterlogging`, `ignore_waterlogging`<br>[enum reference](#static-enum-liquidsettings-141) |
 
 3. `/place feature <feature> [<position>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `action` | Yes | Static Enum (PlaceFeatureAction) | Literal keyword. | `feature`<br>[enum reference](#enum-static-142) |
-   | 2 | `feature` | Yes | Static Enum (features) | Value from static enum `features`. | `minecraft:optional_log_mushrooms_feature`, `minecraft:copper_ore_feature`, `minecraft:fixup_mesa_gold_position_feature`, `minecraft:silverfish_feature`, `minecraft:grass_double_plant_upper_feature`, `minecraft:scatter_warm_ocean_seagrass_feature`, `minecraft:random_oak_tree_from_sapling_feature`, `minecraft:underground_extra_cave_carver_feature`, `minecraft:scatter_fern_feature`, `minecraft:dirt_feature` ... (240 total)<br>[enum reference](#enum-static-25) |
+   | 1 | `action` | Yes | Static Enum (PlaceFeatureAction) | Literal keyword. | `feature`<br>[enum reference](#static-enum-placefeatureaction-142) |
+   | 2 | `feature` | Yes | Static Enum (features) | Value from static enum `features`. | `minecraft:optional_log_mushrooms_feature`, `minecraft:copper_ore_feature`, `minecraft:fixup_mesa_gold_position_feature`, `minecraft:silverfish_feature`, `minecraft:grass_double_plant_upper_feature`, `minecraft:scatter_warm_ocean_seagrass_feature`, `minecraft:random_oak_tree_from_sapling_feature`, `minecraft:underground_extra_cave_carver_feature`, `minecraft:scatter_fern_feature`, `minecraft:dirt_feature` ... (240 total)<br>[enum reference](#static-enum-features-25) |
    | 3 | `position` | No | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
 
 4. `/place featurerule <featurerule> [<position>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `action` | Yes | Static Enum (PlaceFeatureRuleAction) | Literal keyword. | `featurerule`<br>[enum reference](#enum-static-143) |
-   | 2 | `featurerule` | Yes | Static Enum (featureRules) | Value from static enum `featureRules`. | `minecraft:warped_fungus_feature`, `minecraft:nether_cave_carver_feature`, `minecraft:sculk_vein_feature`, `minecraft:small_dripstone_feature`, `minecraft:crimson_roots_feature`, `minecraft:warped_roots_feature`, `minecraft:bamboo_jungle_after_surface_bamboo_feature`, `minecraft:crimson_fungus_warped_feature`, `minecraft:crimson_roots_warped_feature`, `minecraft:savanna_surface_flowers_feature` ... (165 total)<br>[enum reference](#enum-static-144) |
+   | 1 | `action` | Yes | Static Enum (PlaceFeatureRuleAction) | Literal keyword. | `featurerule`<br>[enum reference](#static-enum-placefeatureruleaction-143) |
+   | 2 | `featurerule` | Yes | Static Enum (featureRules) | Value from static enum `featureRules`. | `minecraft:warped_fungus_feature`, `minecraft:nether_cave_carver_feature`, `minecraft:sculk_vein_feature`, `minecraft:small_dripstone_feature`, `minecraft:crimson_roots_feature`, `minecraft:warped_roots_feature`, `minecraft:bamboo_jungle_after_surface_bamboo_feature`, `minecraft:crimson_fungus_warped_feature`, `minecraft:crimson_roots_warped_feature`, `minecraft:savanna_surface_flowers_feature` ... (165 total)<br>[enum reference](#static-enum-featurerules-144) |
    | 3 | `position` | No | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
 
 ### /playanimation
@@ -1723,16 +1722,16 @@ Unlocks recipe in the recipe book for a player.
 1. `/recipe give <player> <recipe>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `give` | Yes | Static Enum (Give) | Literal keyword. | `give`<br>[enum reference](#enum-static-219) |
+   | 1 | `give` | Yes | Static Enum (Give) | Literal keyword. | `give`<br>[enum reference](#static-enum-give-219) |
    | 2 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 3 | `recipe` | Yes | Dynamic Enum (UnlockableRecipeValues) | Runtime or registry-backed value from dynamic enum `UnlockableRecipeValues`. | `*`, `minecraft:copper_spear`, `minecraft:diamond_spear`, `minecraft:golden_spear`, `minecraft:iron_spear`, `minecraft:stone_spear`, `minecraft:wooden_spear`, `minecraft:acacia_shelf_from_stripped_acacia_log`, `minecraft:bamboo_shelf_from_stripped_bamboo_block`, `minecraft:birch_shelf_from_stripped_birch_log` ... (2757 total)<br>[enum reference](#enum-dynamic-2) |
+   | 3 | `recipe` | Yes | Dynamic Enum (UnlockableRecipeValues) | Runtime or registry-backed value from dynamic enum `UnlockableRecipeValues`. | `*`, `minecraft:copper_spear`, `minecraft:diamond_spear`, `minecraft:golden_spear`, `minecraft:iron_spear`, `minecraft:stone_spear`, `minecraft:wooden_spear`, `minecraft:acacia_shelf_from_stripped_acacia_log`, `minecraft:bamboo_shelf_from_stripped_bamboo_block`, `minecraft:birch_shelf_from_stripped_birch_log` ... (2757 total)<br>[enum reference](#dynamic-enum-unlockablerecipevalues-2) |
 
 2. `/recipe take <player> <recipe>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `take` | Yes | Static Enum (Take) | Literal keyword. | `take`<br>[enum reference](#enum-static-218) |
+   | 1 | `take` | Yes | Static Enum (Take) | Literal keyword. | `take`<br>[enum reference](#static-enum-take-218) |
    | 2 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 3 | `recipe` | Yes | Dynamic Enum (UnlockableRecipeValues) | Runtime or registry-backed value from dynamic enum `UnlockableRecipeValues`. | `*`, `minecraft:copper_spear`, `minecraft:diamond_spear`, `minecraft:golden_spear`, `minecraft:iron_spear`, `minecraft:stone_spear`, `minecraft:wooden_spear`, `minecraft:acacia_shelf_from_stripped_acacia_log`, `minecraft:bamboo_shelf_from_stripped_bamboo_block`, `minecraft:birch_shelf_from_stripped_birch_log` ... (2757 total)<br>[enum reference](#enum-dynamic-2) |
+   | 3 | `recipe` | Yes | Dynamic Enum (UnlockableRecipeValues) | Runtime or registry-backed value from dynamic enum `UnlockableRecipeValues`. | `*`, `minecraft:copper_spear`, `minecraft:diamond_spear`, `minecraft:golden_spear`, `minecraft:iron_spear`, `minecraft:stone_spear`, `minecraft:wooden_spear`, `minecraft:acacia_shelf_from_stripped_acacia_log`, `minecraft:bamboo_shelf_from_stripped_bamboo_block`, `minecraft:birch_shelf_from_stripped_birch_log` ... (2757 total)<br>[enum reference](#dynamic-enum-unlockablerecipevalues-2) |
 
 ### /reload
 
@@ -1743,7 +1742,7 @@ Reloads all function and script files from all behavior packs, or optionally rel
 1. `/reload [all]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `all` | No | Static Enum (reload_all) | Literal keyword. | `all`<br>[enum reference](#enum-static-146) |
+   | 1 | `all` | No | Static Enum (reload_all) | Literal keyword. | `all`<br>[enum reference](#static-enum-reloadall-146) |
 
 ### /reloadconfig
 
@@ -1772,11 +1771,11 @@ Replaces items in inventories.
 1. `/replaceitem block <position> slot.container <slotId> <itemName> [<amount>] [<data>] [<components>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `block` | Yes | Static Enum (ReplaceItemBlock) | Literal keyword. | `block`<br>[enum reference](#enum-static-147) |
+   | 1 | `block` | Yes | Static Enum (ReplaceItemBlock) | Literal keyword. | `block`<br>[enum reference](#static-enum-replaceitemblock-147) |
    | 2 | `position` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 3 | `slotType` | Yes | Static Enum (BlockEquipmentSlot) | Literal keyword. | `slot.container`<br>[enum reference](#enum-static-126) |
+   | 3 | `slotType` | Yes | Static Enum (BlockEquipmentSlot) | Literal keyword. | `slot.container`<br>[enum reference](#static-enum-blockequipmentslot-126) |
    | 4 | `slotId` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-   | 5 | `itemName` | Yes | Static Enum (Item) | Value from static enum `Item`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:polished_basalt`, `polished_basalt`, `minecraft:nether_gold_ore`, `nether_gold_ore` ... (3399 total)<br>[enum reference](#enum-static-9) |
+   | 5 | `itemName` | Yes | Static Enum (Item) | Value from static enum `Item`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:polished_basalt`, `polished_basalt`, `minecraft:nether_gold_ore`, `nether_gold_ore` ... (3399 total)<br>[enum reference](#static-enum-item-9) |
    | 6 | `amount` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 7 | `data` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 8 | `components` | No | JSON (id:74) | JSON object/string (components or raw text payload). | `{"text":"Hello"}` |
@@ -1784,11 +1783,11 @@ Replaces items in inventories.
 2. `/replaceitem entity <target> <slotType> <slotId> <itemName> [<amount>] [<data>] [<components>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `entity` | Yes | Static Enum (ReplaceItemEntity) | Literal keyword. | `entity`<br>[enum reference](#enum-static-148) |
+   | 1 | `entity` | Yes | Static Enum (ReplaceItemEntity) | Literal keyword. | `entity`<br>[enum reference](#static-enum-replaceitementity-148) |
    | 2 | `target` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 3 | `slotType` | Yes | Static Enum (EntityEquipmentSlot) | Value from static enum `EntityEquipmentSlot`. | `slot.weapon.mainhand`, `slot.weapon.offhand`, `slot.armor.head`, `slot.armor.chest`, `slot.armor.legs`, `slot.armor.feet`, `slot.armor.body`, `slot.hotbar`, `slot.inventory`, `slot.enderchest` ... (14 total)<br>[enum reference](#enum-static-10) |
+   | 3 | `slotType` | Yes | Static Enum (EntityEquipmentSlot) | Value from static enum `EntityEquipmentSlot`. | `slot.weapon.mainhand`, `slot.weapon.offhand`, `slot.armor.head`, `slot.armor.chest`, `slot.armor.legs`, `slot.armor.feet`, `slot.armor.body`, `slot.hotbar`, `slot.inventory`, `slot.enderchest` ... (14 total)<br>[enum reference](#static-enum-entityequipmentslot-10) |
    | 4 | `slotId` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-   | 5 | `itemName` | Yes | Static Enum (Item) | Value from static enum `Item`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:polished_basalt`, `polished_basalt`, `minecraft:nether_gold_ore`, `nether_gold_ore` ... (3399 total)<br>[enum reference](#enum-static-9) |
+   | 5 | `itemName` | Yes | Static Enum (Item) | Value from static enum `Item`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:polished_basalt`, `polished_basalt`, `minecraft:nether_gold_ore`, `nether_gold_ore` ... (3399 total)<br>[enum reference](#static-enum-item-9) |
    | 6 | `amount` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 7 | `data` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 8 | `components` | No | JSON (id:74) | JSON object/string (components or raw text payload). | `{"text":"Hello"}` |
@@ -1796,12 +1795,12 @@ Replaces items in inventories.
 3. `/replaceitem block <position> slot.container <slotId> <oldItemHandling> <itemName> [<amount>] [<data>] [<components>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `block` | Yes | Static Enum (ReplaceItemBlock) | Literal keyword. | `block`<br>[enum reference](#enum-static-147) |
+   | 1 | `block` | Yes | Static Enum (ReplaceItemBlock) | Literal keyword. | `block`<br>[enum reference](#static-enum-replaceitemblock-147) |
    | 2 | `position` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 3 | `slotType` | Yes | Static Enum (BlockEquipmentSlot) | Literal keyword. | `slot.container`<br>[enum reference](#enum-static-126) |
+   | 3 | `slotType` | Yes | Static Enum (BlockEquipmentSlot) | Literal keyword. | `slot.container`<br>[enum reference](#static-enum-blockequipmentslot-126) |
    | 4 | `slotId` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-   | 5 | `oldItemHandling` | Yes | Static Enum (ReplaceMode) | Value from static enum `ReplaceMode`. | `destroy`, `keep`<br>[enum reference](#enum-static-149) |
-   | 6 | `itemName` | Yes | Static Enum (Item) | Value from static enum `Item`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:polished_basalt`, `polished_basalt`, `minecraft:nether_gold_ore`, `nether_gold_ore` ... (3399 total)<br>[enum reference](#enum-static-9) |
+   | 5 | `oldItemHandling` | Yes | Static Enum (ReplaceMode) | Value from static enum `ReplaceMode`. | `destroy`, `keep`<br>[enum reference](#static-enum-replacemode-149) |
+   | 6 | `itemName` | Yes | Static Enum (Item) | Value from static enum `Item`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:polished_basalt`, `polished_basalt`, `minecraft:nether_gold_ore`, `nether_gold_ore` ... (3399 total)<br>[enum reference](#static-enum-item-9) |
    | 7 | `amount` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 8 | `data` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 9 | `components` | No | JSON (id:74) | JSON object/string (components or raw text payload). | `{"text":"Hello"}` |
@@ -1809,12 +1808,12 @@ Replaces items in inventories.
 4. `/replaceitem entity <target> <slotType> <slotId> <oldItemHandling> <itemName> [<amount>] [<data>] [<components>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `entity` | Yes | Static Enum (ReplaceItemEntity) | Literal keyword. | `entity`<br>[enum reference](#enum-static-148) |
+   | 1 | `entity` | Yes | Static Enum (ReplaceItemEntity) | Literal keyword. | `entity`<br>[enum reference](#static-enum-replaceitementity-148) |
    | 2 | `target` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 3 | `slotType` | Yes | Static Enum (EntityEquipmentSlot) | Value from static enum `EntityEquipmentSlot`. | `slot.weapon.mainhand`, `slot.weapon.offhand`, `slot.armor.head`, `slot.armor.chest`, `slot.armor.legs`, `slot.armor.feet`, `slot.armor.body`, `slot.hotbar`, `slot.inventory`, `slot.enderchest` ... (14 total)<br>[enum reference](#enum-static-10) |
+   | 3 | `slotType` | Yes | Static Enum (EntityEquipmentSlot) | Value from static enum `EntityEquipmentSlot`. | `slot.weapon.mainhand`, `slot.weapon.offhand`, `slot.armor.head`, `slot.armor.chest`, `slot.armor.legs`, `slot.armor.feet`, `slot.armor.body`, `slot.hotbar`, `slot.inventory`, `slot.enderchest` ... (14 total)<br>[enum reference](#static-enum-entityequipmentslot-10) |
    | 4 | `slotId` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
-   | 5 | `oldItemHandling` | Yes | Static Enum (ReplaceMode) | Value from static enum `ReplaceMode`. | `destroy`, `keep`<br>[enum reference](#enum-static-149) |
-   | 6 | `itemName` | Yes | Static Enum (Item) | Value from static enum `Item`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:polished_basalt`, `polished_basalt`, `minecraft:nether_gold_ore`, `nether_gold_ore` ... (3399 total)<br>[enum reference](#enum-static-9) |
+   | 5 | `oldItemHandling` | Yes | Static Enum (ReplaceMode) | Value from static enum `ReplaceMode`. | `destroy`, `keep`<br>[enum reference](#static-enum-replacemode-149) |
+   | 6 | `itemName` | Yes | Static Enum (Item) | Value from static enum `Item`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:polished_basalt`, `polished_basalt`, `minecraft:nether_gold_ore`, `nether_gold_ore` ... (3399 total)<br>[enum reference](#static-enum-item-9) |
    | 7 | `amount` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 8 | `data` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 9 | `components` | No | JSON (id:74) | JSON object/string (components or raw text payload). | `{"text":"Hello"}` |
@@ -1829,29 +1828,29 @@ Makes entities ride other entities, stops entities from riding, makes rides evic
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `riders` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `mode` | Yes | Static Enum (RideModeStart) | Literal keyword. | `start_riding`<br>[enum reference](#enum-static-150) |
+   | 2 | `mode` | Yes | Static Enum (RideModeStart) | Literal keyword. | `start_riding`<br>[enum reference](#static-enum-ridemodestart-150) |
    | 3 | `ride` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 4 | `teleportRules` | No | Static Enum (TeleportRules) | Value from static enum `TeleportRules`. | `teleport_rider`, `teleport_ride`<br>[enum reference](#enum-static-156) |
-   | 5 | `howToFill` | No | Static Enum (FillType) | Value from static enum `FillType`. | `until_full`, `if_group_fits`<br>[enum reference](#enum-static-155) |
+   | 4 | `teleportRules` | No | Static Enum (TeleportRules) | Value from static enum `TeleportRules`. | `teleport_rider`, `teleport_ride`<br>[enum reference](#static-enum-teleportrules-156) |
+   | 5 | `howToFill` | No | Static Enum (FillType) | Value from static enum `FillType`. | `until_full`, `if_group_fits`<br>[enum reference](#static-enum-filltype-155) |
 
 2. `/ride <riders> stop_riding`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `riders` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `mode` | Yes | Static Enum (RideModeStop) | Literal keyword. | `stop_riding`<br>[enum reference](#enum-static-151) |
+   | 2 | `mode` | Yes | Static Enum (RideModeStop) | Literal keyword. | `stop_riding`<br>[enum reference](#static-enum-ridemodestop-151) |
 
 3. `/ride <rides> evict_riders`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `rides` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `mode` | Yes | Static Enum (RideModeEvict) | Literal keyword. | `evict_riders`<br>[enum reference](#enum-static-152) |
+   | 2 | `mode` | Yes | Static Enum (RideModeEvict) | Literal keyword. | `evict_riders`<br>[enum reference](#static-enum-ridemodeevict-152) |
 
 4. `/ride <rides> summon_rider <entityType> [<spawnEvent>] [<nameTag>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `rides` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `mode` | Yes | Static Enum (RideModeSummonRider) | Literal keyword. | `summon_rider`<br>[enum reference](#enum-static-153) |
-   | 3 | `entityType` | Yes | Static Enum (EntityType) | Value from static enum `EntityType`. | `minecraft:slime`, `slime`, `minecraft:tnt`, `tnt`, `minecraft:camel`, `minecraft:turtle`, `minecraft:chicken`, `minecraft:bee`, `minecraft:axolotl`, `minecraft:pig` ... (220 total)<br>[enum reference](#enum-static-27) |
+   | 2 | `mode` | Yes | Static Enum (RideModeSummonRider) | Literal keyword. | `summon_rider`<br>[enum reference](#static-enum-ridemodesummonrider-153) |
+   | 3 | `entityType` | Yes | Static Enum (EntityType) | Value from static enum `EntityType`. | `minecraft:slime`, `slime`, `minecraft:tnt`, `tnt`, `minecraft:camel`, `minecraft:turtle`, `minecraft:chicken`, `minecraft:bee`, `minecraft:axolotl`, `minecraft:pig` ... (220 total)<br>[enum reference](#static-enum-entitytype-27) |
    | 4 | `spawnEvent` | No | String (id:56) | Single string token. | `example_text` |
    | 5 | `nameTag` | No | String (id:56) | Single string token. | `example_text` |
 
@@ -1859,9 +1858,9 @@ Makes entities ride other entities, stops entities from riding, makes rides evic
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `riders` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `mode` | Yes | Static Enum (RideModeSummonRide) | Literal keyword. | `summon_ride`<br>[enum reference](#enum-static-154) |
-   | 3 | `entityType` | Yes | Static Enum (EntityType) | Value from static enum `EntityType`. | `minecraft:slime`, `slime`, `minecraft:tnt`, `tnt`, `minecraft:camel`, `minecraft:turtle`, `minecraft:chicken`, `minecraft:bee`, `minecraft:axolotl`, `minecraft:pig` ... (220 total)<br>[enum reference](#enum-static-27) |
-   | 4 | `rideRules` | No | Static Enum (RideRules) | Value from static enum `RideRules`. | `no_ride_change`, `reassign_rides`, `skip_riders`<br>[enum reference](#enum-static-157) |
+   | 2 | `mode` | Yes | Static Enum (RideModeSummonRide) | Literal keyword. | `summon_ride`<br>[enum reference](#static-enum-ridemodesummonride-154) |
+   | 3 | `entityType` | Yes | Static Enum (EntityType) | Value from static enum `EntityType`. | `minecraft:slime`, `slime`, `minecraft:tnt`, `tnt`, `minecraft:camel`, `minecraft:turtle`, `minecraft:chicken`, `minecraft:bee`, `minecraft:axolotl`, `minecraft:pig` ... (220 total)<br>[enum reference](#static-enum-entitytype-27) |
+   | 4 | `rideRules` | No | Static Enum (RideRules) | Value from static enum `RideRules`. | `no_ride_change`, `reassign_rides`, `skip_riders`<br>[enum reference](#static-enum-riderules-157) |
    | 5 | `spawnEvent` | No | String (id:56) | Single string token. | `example_text` |
    | 6 | `nameTag` | No | String (id:56) | Single string token. | `example_text` |
 
@@ -1874,7 +1873,7 @@ Control or check how the game saves data to disk.
 1. `/save <mode>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (SaveMode) | Value from static enum `SaveMode`. | `query`, `hold`, `resume`<br>[enum reference](#enum-static-243) |
+   | 1 | `mode` | Yes | Static Enum (SaveMode) | Value from static enum `SaveMode`. | `query`, `hold`, `resume`<br>[enum reference](#static-enum-savemode-243) |
 
 ### /say
 
@@ -1896,57 +1895,57 @@ Schedules an action to be executed once an area is loaded, or after a certain am
 1. `/schedule delay add <function> <time> [<DelayMode>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (ScheduleActionDelay) | Literal keyword. | `delay`<br>[enum reference](#enum-static-158) |
-   | 2 | `condition` | Yes | Static Enum (RequestActionAdd) | Literal keyword. | `add`<br>[enum reference](#enum-static-161) |
+   | 1 | `mode` | Yes | Static Enum (ScheduleActionDelay) | Literal keyword. | `delay`<br>[enum reference](#static-enum-scheduleactiondelay-158) |
+   | 2 | `condition` | Yes | Static Enum (RequestActionAdd) | Literal keyword. | `add`<br>[enum reference](#static-enum-requestactionadd-161) |
    | 3 | `function` | Yes | Function Name (id:17) | Behavior-pack function identifier. | `namespace:path/function` |
    | 4 | `time` | Yes | Integer (id:1) | Whole number. Time value. | `0`, `1`, `-1` |
-   | 5 | `DelayMode` | No | Static Enum (DelayMode) | Value from static enum `DelayMode`. | `replace`, `append`<br>[enum reference](#enum-static-163) |
+   | 5 | `DelayMode` | No | Static Enum (DelayMode) | Value from static enum `DelayMode`. | `replace`, `append`<br>[enum reference](#static-enum-delaymode-163) |
 
 2. `/schedule delay add <function> <time> [<DelayMode>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (ScheduleActionDelay) | Literal keyword. | `delay`<br>[enum reference](#enum-static-158) |
-   | 2 | `condition` | Yes | Static Enum (RequestActionAdd) | Literal keyword. | `add`<br>[enum reference](#enum-static-161) |
+   | 1 | `mode` | Yes | Static Enum (ScheduleActionDelay) | Literal keyword. | `delay`<br>[enum reference](#static-enum-scheduleactiondelay-158) |
+   | 2 | `condition` | Yes | Static Enum (RequestActionAdd) | Literal keyword. | `add`<br>[enum reference](#static-enum-requestactionadd-161) |
    | 3 | `function` | Yes | Function Name (id:17) | Behavior-pack function identifier. | `namespace:path/function` |
    | 4 | `time` | Yes | Suffix Number (t) | Numeric value with suffix `t` (ticks). | `10t` |
-   | 5 | `DelayMode` | No | Static Enum (DelayMode) | Value from static enum `DelayMode`. | `replace`, `append`<br>[enum reference](#enum-static-163) |
+   | 5 | `DelayMode` | No | Static Enum (DelayMode) | Value from static enum `DelayMode`. | `replace`, `append`<br>[enum reference](#static-enum-delaymode-163) |
 
 3. `/schedule delay add <function> <time> [<DelayMode>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (ScheduleActionDelay) | Literal keyword. | `delay`<br>[enum reference](#enum-static-158) |
-   | 2 | `condition` | Yes | Static Enum (RequestActionAdd) | Literal keyword. | `add`<br>[enum reference](#enum-static-161) |
+   | 1 | `mode` | Yes | Static Enum (ScheduleActionDelay) | Literal keyword. | `delay`<br>[enum reference](#static-enum-scheduleactiondelay-158) |
+   | 2 | `condition` | Yes | Static Enum (RequestActionAdd) | Literal keyword. | `add`<br>[enum reference](#static-enum-requestactionadd-161) |
    | 3 | `function` | Yes | Function Name (id:17) | Behavior-pack function identifier. | `namespace:path/function` |
    | 4 | `time` | Yes | Suffix Number (s) | Numeric value with suffix `s` (seconds). | `10s` |
-   | 5 | `DelayMode` | No | Static Enum (DelayMode) | Value from static enum `DelayMode`. | `replace`, `append`<br>[enum reference](#enum-static-163) |
+   | 5 | `DelayMode` | No | Static Enum (DelayMode) | Value from static enum `DelayMode`. | `replace`, `append`<br>[enum reference](#static-enum-delaymode-163) |
 
 4. `/schedule delay add <function> <time> [<DelayMode>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (ScheduleActionDelay) | Literal keyword. | `delay`<br>[enum reference](#enum-static-158) |
-   | 2 | `condition` | Yes | Static Enum (RequestActionAdd) | Literal keyword. | `add`<br>[enum reference](#enum-static-161) |
+   | 1 | `mode` | Yes | Static Enum (ScheduleActionDelay) | Literal keyword. | `delay`<br>[enum reference](#static-enum-scheduleactiondelay-158) |
+   | 2 | `condition` | Yes | Static Enum (RequestActionAdd) | Literal keyword. | `add`<br>[enum reference](#static-enum-requestactionadd-161) |
    | 3 | `function` | Yes | Function Name (id:17) | Behavior-pack function identifier. | `namespace:path/function` |
    | 4 | `time` | Yes | Suffix Number (d) | Numeric value with suffix `d` (days). | `10d` |
-   | 5 | `DelayMode` | No | Static Enum (DelayMode) | Value from static enum `DelayMode`. | `replace`, `append`<br>[enum reference](#enum-static-163) |
+   | 5 | `DelayMode` | No | Static Enum (DelayMode) | Value from static enum `DelayMode`. | `replace`, `append`<br>[enum reference](#static-enum-delaymode-163) |
 
 5. `/schedule delay clear <function>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (ScheduleActionDelay) | Literal keyword. | `delay`<br>[enum reference](#enum-static-158) |
-   | 2 | `condition` | Yes | Static Enum (RequestActionClear) | Literal keyword. | `clear`<br>[enum reference](#enum-static-162) |
+   | 1 | `mode` | Yes | Static Enum (ScheduleActionDelay) | Literal keyword. | `delay`<br>[enum reference](#static-enum-scheduleactiondelay-158) |
+   | 2 | `condition` | Yes | Static Enum (RequestActionClear) | Literal keyword. | `clear`<br>[enum reference](#static-enum-requestactionclear-162) |
    | 3 | `function` | Yes | Function Name (id:17) | Behavior-pack function identifier. | `namespace:path/function` |
 
 6. `/schedule clear <function>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (ScheduleActionClear) | Literal keyword. | `clear`<br>[enum reference](#enum-static-160) |
+   | 1 | `mode` | Yes | Static Enum (ScheduleActionClear) | Literal keyword. | `clear`<br>[enum reference](#static-enum-scheduleactionclear-160) |
    | 2 | `function` | Yes | Function Name (id:17) | Behavior-pack function identifier. | `namespace:path/function` |
 
 7. `/schedule on_area_loaded add <from> <to> <function>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (ScheduleActionOnAreaLoaded) | Literal keyword. | `on_area_loaded`<br>[enum reference](#enum-static-159) |
-   | 2 | `condition` | Yes | Static Enum (RequestActionAdd) | Literal keyword. | `add`<br>[enum reference](#enum-static-161) |
+   | 1 | `mode` | Yes | Static Enum (ScheduleActionOnAreaLoaded) | Literal keyword. | `on_area_loaded`<br>[enum reference](#static-enum-scheduleactiononarealoaded-159) |
+   | 2 | `condition` | Yes | Static Enum (RequestActionAdd) | Literal keyword. | `add`<br>[enum reference](#static-enum-requestactionadd-161) |
    | 3 | `from` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 4 | `to` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 5 | `function` | Yes | Function Name (id:17) | Behavior-pack function identifier. | `namespace:path/function` |
@@ -1954,9 +1953,9 @@ Schedules an action to be executed once an area is loaded, or after a certain am
 8. `/schedule on_area_loaded add circle <center> <radius> <function>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (ScheduleActionOnAreaLoaded) | Literal keyword. | `on_area_loaded`<br>[enum reference](#enum-static-159) |
-   | 2 | `condition` | Yes | Static Enum (RequestActionAdd) | Literal keyword. | `add`<br>[enum reference](#enum-static-161) |
-   | 3 | `type` | Yes | Static Enum (CircleArea) | Literal keyword. | `circle`<br>[enum reference](#enum-static-164) |
+   | 1 | `mode` | Yes | Static Enum (ScheduleActionOnAreaLoaded) | Literal keyword. | `on_area_loaded`<br>[enum reference](#static-enum-scheduleactiononarealoaded-159) |
+   | 2 | `condition` | Yes | Static Enum (RequestActionAdd) | Literal keyword. | `add`<br>[enum reference](#static-enum-requestactionadd-161) |
+   | 3 | `type` | Yes | Static Enum (CircleArea) | Literal keyword. | `circle`<br>[enum reference](#static-enum-circlearea-164) |
    | 4 | `center` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 5 | `radius` | Yes | Integer (id:1) | Whole number. Radius value. | `0`, `1`, `-1` |
    | 6 | `function` | Yes | Function Name (id:17) | Behavior-pack function identifier. | `namespace:path/function` |
@@ -1964,27 +1963,27 @@ Schedules an action to be executed once an area is loaded, or after a certain am
 9. `/schedule on_area_loaded add tickingarea <name> <function>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (ScheduleActionOnAreaLoaded) | Literal keyword. | `on_area_loaded`<br>[enum reference](#enum-static-159) |
-   | 2 | `condition` | Yes | Static Enum (RequestActionAdd) | Literal keyword. | `add`<br>[enum reference](#enum-static-161) |
-   | 3 | `type` | Yes | Static Enum (TickingArea) | Literal keyword. | `tickingarea`<br>[enum reference](#enum-static-165) |
+   | 1 | `mode` | Yes | Static Enum (ScheduleActionOnAreaLoaded) | Literal keyword. | `on_area_loaded`<br>[enum reference](#static-enum-scheduleactiononarealoaded-159) |
+   | 2 | `condition` | Yes | Static Enum (RequestActionAdd) | Literal keyword. | `add`<br>[enum reference](#static-enum-requestactionadd-161) |
+   | 3 | `type` | Yes | Static Enum (TickingArea) | Literal keyword. | `tickingarea`<br>[enum reference](#static-enum-tickingarea-165) |
    | 4 | `name` | Yes | String (id:56) | Single string token. | `example_text` |
    | 5 | `function` | Yes | Function Name (id:17) | Behavior-pack function identifier. | `namespace:path/function` |
 
 10. `/schedule on_area_loaded clear tickingarea <name> [<function>]`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `mode` | Yes | Static Enum (ScheduleActionOnAreaLoaded) | Literal keyword. | `on_area_loaded`<br>[enum reference](#enum-static-159) |
-    | 2 | `condition` | Yes | Static Enum (RequestActionClear) | Literal keyword. | `clear`<br>[enum reference](#enum-static-162) |
-    | 3 | `cleartype` | Yes | Static Enum (TickingAreaName) | Literal keyword. | `tickingarea`<br>[enum reference](#enum-static-167) |
+    | 1 | `mode` | Yes | Static Enum (ScheduleActionOnAreaLoaded) | Literal keyword. | `on_area_loaded`<br>[enum reference](#static-enum-scheduleactiononarealoaded-159) |
+    | 2 | `condition` | Yes | Static Enum (RequestActionClear) | Literal keyword. | `clear`<br>[enum reference](#static-enum-requestactionclear-162) |
+    | 3 | `cleartype` | Yes | Static Enum (TickingAreaName) | Literal keyword. | `tickingarea`<br>[enum reference](#static-enum-tickingareaname-167) |
     | 4 | `name` | Yes | String (id:56) | Single string token. | `example_text` |
     | 5 | `function` | No | Function Name (id:17) | Behavior-pack function identifier. | `namespace:path/function` |
 
 11. `/schedule on_area_loaded clear function <function>`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `mode` | Yes | Static Enum (ScheduleActionOnAreaLoaded) | Literal keyword. | `on_area_loaded`<br>[enum reference](#enum-static-159) |
-    | 2 | `condition` | Yes | Static Enum (RequestActionClear) | Literal keyword. | `clear`<br>[enum reference](#enum-static-162) |
-    | 3 | `cleartype` | Yes | Static Enum (FunctionName) | Literal keyword. | `function`<br>[enum reference](#enum-static-166) |
+    | 1 | `mode` | Yes | Static Enum (ScheduleActionOnAreaLoaded) | Literal keyword. | `on_area_loaded`<br>[enum reference](#static-enum-scheduleactiononarealoaded-159) |
+    | 2 | `condition` | Yes | Static Enum (RequestActionClear) | Literal keyword. | `clear`<br>[enum reference](#static-enum-requestactionclear-162) |
+    | 3 | `cleartype` | Yes | Static Enum (FunctionName) | Literal keyword. | `function`<br>[enum reference](#static-enum-functionname-166) |
     | 4 | `function` | Yes | Function Name (id:17) | Behavior-pack function identifier. | `namespace:path/function` |
 
 ### /scoreboard
@@ -1996,96 +1995,96 @@ Tracks and displays scores for various objectives.
 1. `/scoreboard objectives add <objective> dummy [<displayName>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `category` | Yes | Static Enum (ScoreboardObjectivesCategory) | Literal keyword. | `objectives`<br>[enum reference](#enum-static-168) |
-   | 2 | `action` | Yes | Static Enum (ScoreboardAddAction) | Literal keyword. | `add`<br>[enum reference](#enum-static-170) |
-   | 3 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#enum-dynamic-0) |
-   | 4 | `criteria` | Yes | Static Enum (ScoreboardCriteria) | Literal keyword. | `dummy`<br>[enum reference](#enum-static-182) |
+   | 1 | `category` | Yes | Static Enum (ScoreboardObjectivesCategory) | Literal keyword. | `objectives`<br>[enum reference](#static-enum-scoreboardobjectivescategory-168) |
+   | 2 | `action` | Yes | Static Enum (ScoreboardAddAction) | Literal keyword. | `add`<br>[enum reference](#static-enum-scoreboardaddaction-170) |
+   | 3 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#dynamic-enum-scoreboardobjectives-0) |
+   | 4 | `criteria` | Yes | Static Enum (ScoreboardCriteria) | Literal keyword. | `dummy`<br>[enum reference](#static-enum-scoreboardcriteria-182) |
    | 5 | `displayName` | No | String (id:56) | Single string token. | `example_text` |
 
 2. `/scoreboard objectives remove <objective>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `category` | Yes | Static Enum (ScoreboardObjectivesCategory) | Literal keyword. | `objectives`<br>[enum reference](#enum-static-168) |
-   | 2 | `action` | Yes | Static Enum (ScoreboardRemoveAction) | Literal keyword. | `remove`<br>[enum reference](#enum-static-171) |
-   | 3 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#enum-dynamic-0) |
+   | 1 | `category` | Yes | Static Enum (ScoreboardObjectivesCategory) | Literal keyword. | `objectives`<br>[enum reference](#static-enum-scoreboardobjectivescategory-168) |
+   | 2 | `action` | Yes | Static Enum (ScoreboardRemoveAction) | Literal keyword. | `remove`<br>[enum reference](#static-enum-scoreboardremoveaction-171) |
+   | 3 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#dynamic-enum-scoreboardobjectives-0) |
 
 3. `/scoreboard objectives list`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `category` | Yes | Static Enum (ScoreboardObjectivesCategory) | Literal keyword. | `objectives`<br>[enum reference](#enum-static-168) |
-   | 2 | `action` | Yes | Static Enum (ScoreboardListAction) | Literal keyword. | `list`<br>[enum reference](#enum-static-174) |
+   | 1 | `category` | Yes | Static Enum (ScoreboardObjectivesCategory) | Literal keyword. | `objectives`<br>[enum reference](#static-enum-scoreboardobjectivescategory-168) |
+   | 2 | `action` | Yes | Static Enum (ScoreboardListAction) | Literal keyword. | `list`<br>[enum reference](#static-enum-scoreboardlistaction-174) |
 
 4. `/scoreboard objectives setdisplay <displaySlot> [<objective>] [<sortOrder>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `category` | Yes | Static Enum (ScoreboardObjectivesCategory) | Literal keyword. | `objectives`<br>[enum reference](#enum-static-168) |
-   | 2 | `action` | Yes | Static Enum (ScoreboardSetDisplayAction) | Literal keyword. | `setdisplay`<br>[enum reference](#enum-static-173) |
-   | 3 | `displaySlot` | Yes | Static Enum (ScoreboardDisplaySlotSortable) | Value from static enum `ScoreboardDisplaySlotSortable`. | `list`, `sidebar`<br>[enum reference](#enum-static-180) |
-   | 4 | `objective` | No | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#enum-dynamic-0) |
-   | 5 | `sortOrder` | No | Static Enum (ScoreboardSortOrder) | Value from static enum `ScoreboardSortOrder`. | `ascending`, `descending`<br>[enum reference](#enum-static-179) |
+   | 1 | `category` | Yes | Static Enum (ScoreboardObjectivesCategory) | Literal keyword. | `objectives`<br>[enum reference](#static-enum-scoreboardobjectivescategory-168) |
+   | 2 | `action` | Yes | Static Enum (ScoreboardSetDisplayAction) | Literal keyword. | `setdisplay`<br>[enum reference](#static-enum-scoreboardsetdisplayaction-173) |
+   | 3 | `displaySlot` | Yes | Static Enum (ScoreboardDisplaySlotSortable) | Value from static enum `ScoreboardDisplaySlotSortable`. | `list`, `sidebar`<br>[enum reference](#static-enum-scoreboarddisplayslotsortable-180) |
+   | 4 | `objective` | No | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#dynamic-enum-scoreboardobjectives-0) |
+   | 5 | `sortOrder` | No | Static Enum (ScoreboardSortOrder) | Value from static enum `ScoreboardSortOrder`. | `ascending`, `descending`<br>[enum reference](#static-enum-scoreboardsortorder-179) |
 
 5. `/scoreboard objectives setdisplay belowname [<objective>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `category` | Yes | Static Enum (ScoreboardObjectivesCategory) | Literal keyword. | `objectives`<br>[enum reference](#enum-static-168) |
-   | 2 | `action` | Yes | Static Enum (ScoreboardSetDisplayAction) | Literal keyword. | `setdisplay`<br>[enum reference](#enum-static-173) |
-   | 3 | `displaySlot` | Yes | Static Enum (ScoreboardDisplaySlotNonSortable) | Literal keyword. | `belowname`<br>[enum reference](#enum-static-181) |
-   | 4 | `objective` | No | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#enum-dynamic-0) |
+   | 1 | `category` | Yes | Static Enum (ScoreboardObjectivesCategory) | Literal keyword. | `objectives`<br>[enum reference](#static-enum-scoreboardobjectivescategory-168) |
+   | 2 | `action` | Yes | Static Enum (ScoreboardSetDisplayAction) | Literal keyword. | `setdisplay`<br>[enum reference](#static-enum-scoreboardsetdisplayaction-173) |
+   | 3 | `displaySlot` | Yes | Static Enum (ScoreboardDisplaySlotNonSortable) | Literal keyword. | `belowname`<br>[enum reference](#static-enum-scoreboarddisplayslotnonsortable-181) |
+   | 4 | `objective` | No | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#dynamic-enum-scoreboardobjectives-0) |
 
 6. `/scoreboard players list [<playername>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `category` | Yes | Static Enum (ScoreboardPlayersCategory) | Literal keyword. | `players`<br>[enum reference](#enum-static-169) |
-   | 2 | `action` | Yes | Static Enum (ScoreboardListAction) | Literal keyword. | `list`<br>[enum reference](#enum-static-174) |
+   | 1 | `category` | Yes | Static Enum (ScoreboardPlayersCategory) | Literal keyword. | `players`<br>[enum reference](#static-enum-scoreboardplayerscategory-169) |
+   | 2 | `action` | Yes | Static Enum (ScoreboardListAction) | Literal keyword. | `list`<br>[enum reference](#static-enum-scoreboardlistaction-174) |
    | 3 | `playername` | No | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
 
 7. `/scoreboard players reset <player> [<objective>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `category` | Yes | Static Enum (ScoreboardPlayersCategory) | Literal keyword. | `players`<br>[enum reference](#enum-static-169) |
-   | 2 | `action` | Yes | Static Enum (ScoreboardResetAction) | Literal keyword. | `reset`<br>[enum reference](#enum-static-175) |
+   | 1 | `category` | Yes | Static Enum (ScoreboardPlayersCategory) | Literal keyword. | `players`<br>[enum reference](#static-enum-scoreboardplayerscategory-169) |
+   | 2 | `action` | Yes | Static Enum (ScoreboardResetAction) | Literal keyword. | `reset`<br>[enum reference](#static-enum-scoreboardresetaction-175) |
    | 3 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 4 | `objective` | No | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#enum-dynamic-0) |
+   | 4 | `objective` | No | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#dynamic-enum-scoreboardobjectives-0) |
 
 8. `/scoreboard players test <player> <objective> <min> [<max>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `category` | Yes | Static Enum (ScoreboardPlayersCategory) | Literal keyword. | `players`<br>[enum reference](#enum-static-169) |
-   | 2 | `action` | Yes | Static Enum (ScoreboardTestAction) | Literal keyword. | `test`<br>[enum reference](#enum-static-176) |
+   | 1 | `category` | Yes | Static Enum (ScoreboardPlayersCategory) | Literal keyword. | `players`<br>[enum reference](#static-enum-scoreboardplayerscategory-169) |
+   | 2 | `action` | Yes | Static Enum (ScoreboardTestAction) | Literal keyword. | `test`<br>[enum reference](#static-enum-scoreboardtestaction-176) |
    | 3 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 4 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#enum-dynamic-0) |
+   | 4 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#dynamic-enum-scoreboardobjectives-0) |
    | 5 | `min` | Yes | Integer (id:5) | Whole number (often score bounds). | `0`, `100` |
    | 6 | `max` | No | Integer (id:5) | Whole number (often score bounds). | `0`, `100` |
 
 9. `/scoreboard players random <player> <objective> <min> <max>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `category` | Yes | Static Enum (ScoreboardPlayersCategory) | Literal keyword. | `players`<br>[enum reference](#enum-static-169) |
-   | 2 | `action` | Yes | Static Enum (ScoreboardRandomAction) | Literal keyword. | `random`<br>[enum reference](#enum-static-172) |
+   | 1 | `category` | Yes | Static Enum (ScoreboardPlayersCategory) | Literal keyword. | `players`<br>[enum reference](#static-enum-scoreboardplayerscategory-169) |
+   | 2 | `action` | Yes | Static Enum (ScoreboardRandomAction) | Literal keyword. | `random`<br>[enum reference](#static-enum-scoreboardrandomaction-172) |
    | 3 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 4 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#enum-dynamic-0) |
+   | 4 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#dynamic-enum-scoreboardobjectives-0) |
    | 5 | `min` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 6 | `max` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
 
 10. `/scoreboard players <action> <player> <objective> <count>`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `category` | Yes | Static Enum (ScoreboardPlayersCategory) | Literal keyword. | `players`<br>[enum reference](#enum-static-169) |
-    | 2 | `action` | Yes | Static Enum (ScoreboardPlayersNumAction) | Value from static enum `ScoreboardPlayersNumAction`. | `set`, `add`, `remove`<br>[enum reference](#enum-static-177) |
+    | 1 | `category` | Yes | Static Enum (ScoreboardPlayersCategory) | Literal keyword. | `players`<br>[enum reference](#static-enum-scoreboardplayerscategory-169) |
+    | 2 | `action` | Yes | Static Enum (ScoreboardPlayersNumAction) | Value from static enum `ScoreboardPlayersNumAction`. | `set`, `add`, `remove`<br>[enum reference](#static-enum-scoreboardplayersnumaction-177) |
     | 3 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 4 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#enum-dynamic-0) |
+    | 4 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#dynamic-enum-scoreboardobjectives-0) |
     | 5 | `count` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
 
 11. `/scoreboard players operation <targetName> <targetObjective> <operation> <selector> <objective>`
     | # | Parameter | Required | Type | Description | Candidates |
     | --- | --- | --- | --- | --- | --- |
-    | 1 | `category` | Yes | Static Enum (ScoreboardPlayersCategory) | Literal keyword. | `players`<br>[enum reference](#enum-static-169) |
-    | 2 | `action` | Yes | Static Enum (ScoreboardOperationAction) | Literal keyword. | `operation`<br>[enum reference](#enum-static-178) |
+    | 1 | `category` | Yes | Static Enum (ScoreboardPlayersCategory) | Literal keyword. | `players`<br>[enum reference](#static-enum-scoreboardplayerscategory-169) |
+    | 2 | `action` | Yes | Static Enum (ScoreboardOperationAction) | Literal keyword. | `operation`<br>[enum reference](#static-enum-scoreboardoperationaction-178) |
     | 3 | `targetName` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 4 | `targetObjective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#enum-dynamic-0) |
+    | 4 | `targetObjective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#dynamic-enum-scoreboardobjectives-0) |
     | 5 | `operation` | Yes | Comparison Operator (id:6) | Comparison operator. | `<`, `<=`, `=`, `>=`, `>` |
     | 6 | `selector` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 7 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#enum-dynamic-0) |
+    | 7 | `objective` | Yes | Dynamic Enum (ScoreboardObjectives) | Runtime or registry-backed value from dynamic enum `ScoreboardObjectives`. | [enum reference](#dynamic-enum-scoreboardobjectives-0) |
 
 ### /sendshowstoreoffer
 
@@ -2097,14 +2096,14 @@ Sends a request to show a store offer to the target player.
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `redirectType` | Yes | Static Enum (RedirectLocation) | Value from static enum `RedirectLocation`. | `marketplace`, `character`<br>[enum reference](#enum-static-248) |
+   | 2 | `redirectType` | Yes | Static Enum (RedirectLocation) | Value from static enum `RedirectLocation`. | `marketplace`, `character`<br>[enum reference](#static-enum-redirectlocation-248) |
    | 3 | `offerId` | Yes | String (id:56) | Single string token. | `example_text` |
 
 2. `/sendshowstoreoffer <player> server`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `redirectType` | Yes | Static Enum (3PServerOfferList) | Literal keyword. | `server`<br>[enum reference](#enum-static-249) |
+   | 2 | `redirectType` | Yes | Static Enum (3PServerOfferList) | Literal keyword. | `server`<br>[enum reference](#static-enum-3pserverofferlist-249) |
 
 ### /setblock
 
@@ -2116,16 +2115,16 @@ Changes a block to another block.
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `position` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 2 | `tileName` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#enum-static-24) |
+   | 2 | `tileName` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#static-enum-block-24) |
    | 3 | `blockStates` | Yes | Block States (id:84) | Block state expression. | `["facing_direction"=2]`, `{"facing_direction":2}` |
-   | 4 | `oldBlockHandling` | No | Static Enum (SetBlockMode) | Value from static enum `SetBlockMode`. | `replace`, `destroy`, `keep`<br>[enum reference](#enum-static-183) |
+   | 4 | `oldBlockHandling` | No | Static Enum (SetBlockMode) | Value from static enum `SetBlockMode`. | `replace`, `destroy`, `keep`<br>[enum reference](#static-enum-setblockmode-183) |
 
 2. `/setblock <position> <tileName> [<oldBlockHandling>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `position` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 2 | `tileName` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#enum-static-24) |
-   | 3 | `oldBlockHandling` | No | Static Enum (SetBlockMode) | Value from static enum `SetBlockMode`. | `replace`, `destroy`, `keep`<br>[enum reference](#enum-static-183) |
+   | 2 | `tileName` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#static-enum-block-24) |
+   | 3 | `oldBlockHandling` | No | Static Enum (SetBlockMode) | Value from static enum `SetBlockMode`. | `replace`, `destroy`, `keep`<br>[enum reference](#static-enum-setblockmode-183) |
 
 ### /setmaxplayers
 
@@ -2207,56 +2206,56 @@ Saves or loads a structure in the world.
 1. `/structure save <name> <from> <to> [<saveMode>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `action` | Yes | Static Enum (StructureSaveAction) | Literal keyword. | `save`<br>[enum reference](#enum-static-184) |
+   | 1 | `action` | Yes | Static Enum (StructureSaveAction) | Literal keyword. | `save`<br>[enum reference](#static-enum-structuresaveaction-184) |
    | 2 | `name` | Yes | String (id:56) | Single string token. | `example_text` |
    | 3 | `from` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 4 | `to` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 5 | `saveMode` | No | Static Enum (StructureSaveMode) | Value from static enum `StructureSaveMode`. | `disk`, `memory`<br>[enum reference](#enum-static-187) |
+   | 5 | `saveMode` | No | Static Enum (StructureSaveMode) | Value from static enum `StructureSaveMode`. | `disk`, `memory`<br>[enum reference](#static-enum-structuresavemode-187) |
 
 2. `/structure save <name> <from> <to> [<includeEntities>] [<saveMode>] [<includeBlocks>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `action` | Yes | Static Enum (StructureSaveAction) | Literal keyword. | `save`<br>[enum reference](#enum-static-184) |
+   | 1 | `action` | Yes | Static Enum (StructureSaveAction) | Literal keyword. | `save`<br>[enum reference](#static-enum-structuresaveaction-184) |
    | 2 | `name` | Yes | String (id:56) | Single string token. | `example_text` |
    | 3 | `from` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 4 | `to` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 5 | `includeEntities` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
-   | 6 | `saveMode` | No | Static Enum (StructureSaveMode) | Value from static enum `StructureSaveMode`. | `disk`, `memory`<br>[enum reference](#enum-static-187) |
-   | 7 | `includeBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 5 | `includeEntities` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
+   | 6 | `saveMode` | No | Static Enum (StructureSaveMode) | Value from static enum `StructureSaveMode`. | `disk`, `memory`<br>[enum reference](#static-enum-structuresavemode-187) |
+   | 7 | `includeBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 3. `/structure delete <name>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `action` | Yes | Static Enum (StructureDeleteAction) | Literal keyword. | `delete`<br>[enum reference](#enum-static-186) |
+   | 1 | `action` | Yes | Static Enum (StructureDeleteAction) | Literal keyword. | `delete`<br>[enum reference](#static-enum-structuredeleteaction-186) |
    | 2 | `name` | Yes | String (id:56) | Single string token. | `example_text` |
 
 4. `/structure load <name> <to> [<rotation>] [<mirror>] [<includeEntities>] [<includeBlocks>] [<waterlogged>] [<integrity>] [<seed>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `action` | Yes | Static Enum (StructureLoadAction) | Literal keyword. | `load`<br>[enum reference](#enum-static-185) |
+   | 1 | `action` | Yes | Static Enum (StructureLoadAction) | Literal keyword. | `load`<br>[enum reference](#static-enum-structureloadaction-185) |
    | 2 | `name` | Yes | String (id:56) | Single string token. | `example_text` |
    | 3 | `to` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 4 | `rotation` | No | Static Enum (Rotation) | Value from static enum `Rotation`. | `0_degrees`, `90_degrees`, `180_degrees`, `270_degrees`<br>[enum reference](#enum-static-30) |
-   | 5 | `mirror` | No | Static Enum (Mirror) | Value from static enum `Mirror`. | `x`, `z`, `none`, `xz`<br>[enum reference](#enum-static-31) |
-   | 6 | `includeEntities` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
-   | 7 | `includeBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
-   | 8 | `waterlogged` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 4 | `rotation` | No | Static Enum (Rotation) | Value from static enum `Rotation`. | `0_degrees`, `90_degrees`, `180_degrees`, `270_degrees`<br>[enum reference](#static-enum-rotation-30) |
+   | 5 | `mirror` | No | Static Enum (Mirror) | Value from static enum `Mirror`. | `x`, `z`, `none`, `xz`<br>[enum reference](#static-enum-mirror-31) |
+   | 6 | `includeEntities` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
+   | 7 | `includeBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
+   | 8 | `waterlogged` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
    | 9 | `integrity` | No | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
    | 10 | `seed` | No | String (id:56) | Single string token. | `example_text` |
 
 5. `/structure load <name> <to> [<rotation>] [<mirror>] [<animationMode>] [<animationSeconds>] [<includeEntities>] [<includeBlocks>] [<waterlogged>] [<integrity>] [<seed>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `action` | Yes | Static Enum (StructureLoadAction) | Literal keyword. | `load`<br>[enum reference](#enum-static-185) |
+   | 1 | `action` | Yes | Static Enum (StructureLoadAction) | Literal keyword. | `load`<br>[enum reference](#static-enum-structureloadaction-185) |
    | 2 | `name` | Yes | String (id:56) | Single string token. | `example_text` |
    | 3 | `to` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 4 | `rotation` | No | Static Enum (Rotation) | Value from static enum `Rotation`. | `0_degrees`, `90_degrees`, `180_degrees`, `270_degrees`<br>[enum reference](#enum-static-30) |
-   | 5 | `mirror` | No | Static Enum (Mirror) | Value from static enum `Mirror`. | `x`, `z`, `none`, `xz`<br>[enum reference](#enum-static-31) |
-   | 6 | `animationMode` | No | Static Enum (StructureAnimationMode) | Value from static enum `StructureAnimationMode`. | `block_by_block`, `layer_by_layer`<br>[enum reference](#enum-static-188) |
+   | 4 | `rotation` | No | Static Enum (Rotation) | Value from static enum `Rotation`. | `0_degrees`, `90_degrees`, `180_degrees`, `270_degrees`<br>[enum reference](#static-enum-rotation-30) |
+   | 5 | `mirror` | No | Static Enum (Mirror) | Value from static enum `Mirror`. | `x`, `z`, `none`, `xz`<br>[enum reference](#static-enum-mirror-31) |
+   | 6 | `animationMode` | No | Static Enum (StructureAnimationMode) | Value from static enum `StructureAnimationMode`. | `block_by_block`, `layer_by_layer`<br>[enum reference](#static-enum-structureanimationmode-188) |
    | 7 | `animationSeconds` | No | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
-   | 8 | `includeEntities` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
-   | 9 | `includeBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
-   | 10 | `waterlogged` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 8 | `includeEntities` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
+   | 9 | `includeBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
+   | 10 | `waterlogged` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
    | 11 | `integrity` | No | Float (id:3) | Decimal number. | `0`, `1.5`, `-2.0` |
    | 12 | `seed` | No | String (id:56) | Single string token. | `example_text` |
 
@@ -2269,38 +2268,38 @@ Summons an entity.
 1. `/summon <entityType> [<spawnPos>] [<yRot>] [<xRot>] [<spawnEvent>] [<nameTag>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `entityType` | Yes | Static Enum (EntityType) | Value from static enum `EntityType`. | `minecraft:slime`, `slime`, `minecraft:tnt`, `tnt`, `minecraft:camel`, `minecraft:turtle`, `minecraft:chicken`, `minecraft:bee`, `minecraft:axolotl`, `minecraft:pig` ... (220 total)<br>[enum reference](#enum-static-27) |
+   | 1 | `entityType` | Yes | Static Enum (EntityType) | Value from static enum `EntityType`. | `minecraft:slime`, `slime`, `minecraft:tnt`, `tnt`, `minecraft:camel`, `minecraft:turtle`, `minecraft:chicken`, `minecraft:bee`, `minecraft:axolotl`, `minecraft:pig` ... (220 total)<br>[enum reference](#static-enum-entitytype-27) |
    | 2 | `spawnPos` | No | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
    | 3 | `yRot` | No | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
    | 4 | `xRot` | No | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
-   | 5 | `spawnEvent` | No | Dynamic Enum (EntityEvents) | Runtime or registry-backed value from dynamic enum `EntityEvents`. | `abort_sheltering`, `admire_item_started_event`, `admire_item_stopped_event`, `ageable_grow_up`, `attack_cooldown_complete_event`, `attacked`, `be_sheared`, `become_angry`, `become_angry_event`, `become_calm_event` ... (451 total)<br>[enum reference](#enum-dynamic-7) |
+   | 5 | `spawnEvent` | No | Dynamic Enum (EntityEvents) | Runtime or registry-backed value from dynamic enum `EntityEvents`. | `abort_sheltering`, `admire_item_started_event`, `admire_item_stopped_event`, `ageable_grow_up`, `attack_cooldown_complete_event`, `attacked`, `be_sheared`, `become_angry`, `become_angry_event`, `become_calm_event` ... (451 total)<br>[enum reference](#dynamic-enum-entityevents-7) |
    | 6 | `nameTag` | No | String (id:56) | Single string token. | `example_text` |
 
 2. `/summon <entityType> <nameTag> [<spawnPos>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `entityType` | Yes | Static Enum (EntityType) | Value from static enum `EntityType`. | `minecraft:slime`, `slime`, `minecraft:tnt`, `tnt`, `minecraft:camel`, `minecraft:turtle`, `minecraft:chicken`, `minecraft:bee`, `minecraft:axolotl`, `minecraft:pig` ... (220 total)<br>[enum reference](#enum-static-27) |
+   | 1 | `entityType` | Yes | Static Enum (EntityType) | Value from static enum `EntityType`. | `minecraft:slime`, `slime`, `minecraft:tnt`, `tnt`, `minecraft:camel`, `minecraft:turtle`, `minecraft:chicken`, `minecraft:bee`, `minecraft:axolotl`, `minecraft:pig` ... (220 total)<br>[enum reference](#static-enum-entitytype-27) |
    | 2 | `nameTag` | Yes | String (id:56) | Single string token. | `example_text` |
    | 3 | `spawnPos` | No | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
 
 3. `/summon <entityType> [<spawnPos>] facing <lookAtPosition> [<spawnEvent>] [<nameTag>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `entityType` | Yes | Static Enum (EntityType) | Value from static enum `EntityType`. | `minecraft:slime`, `slime`, `minecraft:tnt`, `tnt`, `minecraft:camel`, `minecraft:turtle`, `minecraft:chicken`, `minecraft:bee`, `minecraft:axolotl`, `minecraft:pig` ... (220 total)<br>[enum reference](#enum-static-27) |
+   | 1 | `entityType` | Yes | Static Enum (EntityType) | Value from static enum `EntityType`. | `minecraft:slime`, `slime`, `minecraft:tnt`, `tnt`, `minecraft:camel`, `minecraft:turtle`, `minecraft:chicken`, `minecraft:bee`, `minecraft:axolotl`, `minecraft:pig` ... (220 total)<br>[enum reference](#static-enum-entitytype-27) |
    | 2 | `spawnPos` | No | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 3 | `facing` | Yes | Static Enum (TeleportFacing) | Literal keyword. | `facing`<br>[enum reference](#enum-static-189) |
+   | 3 | `facing` | Yes | Static Enum (TeleportFacing) | Literal keyword. | `facing`<br>[enum reference](#static-enum-teleportfacing-189) |
    | 4 | `lookAtPosition` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 5 | `spawnEvent` | No | Dynamic Enum (EntityEvents) | Runtime or registry-backed value from dynamic enum `EntityEvents`. | `abort_sheltering`, `admire_item_started_event`, `admire_item_stopped_event`, `ageable_grow_up`, `attack_cooldown_complete_event`, `attacked`, `be_sheared`, `become_angry`, `become_angry_event`, `become_calm_event` ... (451 total)<br>[enum reference](#enum-dynamic-7) |
+   | 5 | `spawnEvent` | No | Dynamic Enum (EntityEvents) | Runtime or registry-backed value from dynamic enum `EntityEvents`. | `abort_sheltering`, `admire_item_started_event`, `admire_item_stopped_event`, `ageable_grow_up`, `attack_cooldown_complete_event`, `attacked`, `be_sheared`, `become_angry`, `become_angry_event`, `become_calm_event` ... (451 total)<br>[enum reference](#dynamic-enum-entityevents-7) |
    | 6 | `nameTag` | No | String (id:56) | Single string token. | `example_text` |
 
 4. `/summon <entityType> [<spawnPos>] facing <lookAtEntity> [<spawnEvent>] [<nameTag>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `entityType` | Yes | Static Enum (EntityType) | Value from static enum `EntityType`. | `minecraft:slime`, `slime`, `minecraft:tnt`, `tnt`, `minecraft:camel`, `minecraft:turtle`, `minecraft:chicken`, `minecraft:bee`, `minecraft:axolotl`, `minecraft:pig` ... (220 total)<br>[enum reference](#enum-static-27) |
+   | 1 | `entityType` | Yes | Static Enum (EntityType) | Value from static enum `EntityType`. | `minecraft:slime`, `slime`, `minecraft:tnt`, `tnt`, `minecraft:camel`, `minecraft:turtle`, `minecraft:chicken`, `minecraft:bee`, `minecraft:axolotl`, `minecraft:pig` ... (220 total)<br>[enum reference](#static-enum-entitytype-27) |
    | 2 | `spawnPos` | No | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 3 | `facing` | Yes | Static Enum (TeleportFacing) | Literal keyword. | `facing`<br>[enum reference](#enum-static-189) |
+   | 3 | `facing` | Yes | Static Enum (TeleportFacing) | Literal keyword. | `facing`<br>[enum reference](#static-enum-teleportfacing-189) |
    | 4 | `lookAtEntity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 5 | `spawnEvent` | No | Dynamic Enum (EntityEvents) | Runtime or registry-backed value from dynamic enum `EntityEvents`. | `abort_sheltering`, `admire_item_started_event`, `admire_item_stopped_event`, `ageable_grow_up`, `attack_cooldown_complete_event`, `attacked`, `be_sheared`, `become_angry`, `become_angry_event`, `become_calm_event` ... (451 total)<br>[enum reference](#enum-dynamic-7) |
+   | 5 | `spawnEvent` | No | Dynamic Enum (EntityEvents) | Runtime or registry-backed value from dynamic enum `EntityEvents`. | `abort_sheltering`, `admire_item_started_event`, `admire_item_stopped_event`, `ageable_grow_up`, `attack_cooldown_complete_event`, `attacked`, `be_sheared`, `become_angry`, `become_angry_event`, `become_calm_event` ... (451 total)<br>[enum reference](#dynamic-enum-entityevents-7) |
    | 6 | `nameTag` | No | String (id:56) | Single string token. | `example_text` |
 
 ### /tag
@@ -2313,14 +2312,14 @@ Manages tags stored in entities.
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `entity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `action` | Yes | Static Enum (TagChangeAction) | Value from static enum `TagChangeAction`. | `add`, `remove`<br>[enum reference](#enum-static-190) |
-   | 3 | `name` | Yes | Dynamic Enum (TagValues) | Runtime or registry-backed value from dynamic enum `TagValues`. | [enum reference](#enum-dynamic-1) |
+   | 2 | `action` | Yes | Static Enum (TagChangeAction) | Value from static enum `TagChangeAction`. | `add`, `remove`<br>[enum reference](#static-enum-tagchangeaction-190) |
+   | 3 | `name` | Yes | Dynamic Enum (TagValues) | Runtime or registry-backed value from dynamic enum `TagValues`. | [enum reference](#dynamic-enum-tagvalues-1) |
 
 2. `/tag <entity> list`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `entity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `action` | Yes | Static Enum (TagListAction) | Literal keyword. | `list`<br>[enum reference](#enum-static-191) |
+   | 2 | `action` | Yes | Static Enum (TagListAction) | Literal keyword. | `list`<br>[enum reference](#static-enum-taglistaction-191) |
 
 ### /teleport
 
@@ -2334,7 +2333,7 @@ Teleports entities (players, mobs, etc.).
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `destination` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 2 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 2 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 2. `/teleport <destination> [<yRot>] [<xRot>] [<checkForBlocks>]`
    | # | Parameter | Required | Type | Description | Candidates |
@@ -2342,23 +2341,23 @@ Teleports entities (players, mobs, etc.).
    | 1 | `destination` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
    | 2 | `yRot` | No | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
    | 3 | `xRot` | No | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
-   | 4 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 4 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 3. `/teleport <destination> facing <lookAtPosition> [<checkForBlocks>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `destination` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 2 | `facing` | Yes | Static Enum (TeleportFacing) | Literal keyword. | `facing`<br>[enum reference](#enum-static-189) |
+   | 2 | `facing` | Yes | Static Enum (TeleportFacing) | Literal keyword. | `facing`<br>[enum reference](#static-enum-teleportfacing-189) |
    | 3 | `lookAtPosition` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 4 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 4 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 4. `/teleport <destination> facing <lookAtEntity> [<checkForBlocks>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `destination` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 2 | `facing` | Yes | Static Enum (TeleportFacing) | Literal keyword. | `facing`<br>[enum reference](#enum-static-189) |
+   | 2 | `facing` | Yes | Static Enum (TeleportFacing) | Literal keyword. | `facing`<br>[enum reference](#static-enum-teleportfacing-189) |
    | 3 | `lookAtEntity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 4 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 4 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 5. `/teleport <victim> <destination> [<yRot>] [<xRot>] [<checkForBlocks>]`
    | # | Parameter | Required | Type | Description | Candidates |
@@ -2367,32 +2366,32 @@ Teleports entities (players, mobs, etc.).
    | 2 | `destination` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
    | 3 | `yRot` | No | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
    | 4 | `xRot` | No | Angle/Float (id:4) | Angle or decimal number (command-specific). Rotation angle in degrees. | `0`, `45`, `-90` |
-   | 5 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 5 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 6. `/teleport <victim> <destination> [<checkForBlocks>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `victim` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
    | 2 | `destination` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 3 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 3 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 7. `/teleport <victim> <destination> facing <lookAtPosition> [<checkForBlocks>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `victim` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
    | 2 | `destination` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 3 | `facing` | Yes | Static Enum (TeleportFacing) | Literal keyword. | `facing`<br>[enum reference](#enum-static-189) |
+   | 3 | `facing` | Yes | Static Enum (TeleportFacing) | Literal keyword. | `facing`<br>[enum reference](#static-enum-teleportfacing-189) |
    | 4 | `lookAtPosition` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 5 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 5 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 8. `/teleport <victim> <destination> facing <lookAtEntity> [<checkForBlocks>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `victim` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
    | 2 | `destination` | Yes | Position (id:65) | Coordinates (supports relative/local). Coordinate argument. | `~ ~ ~`, `^ ^ ^`, `100.5 64 -30.25` |
-   | 3 | `facing` | Yes | Static Enum (TeleportFacing) | Literal keyword. | `facing`<br>[enum reference](#enum-static-189) |
+   | 3 | `facing` | Yes | Static Enum (TeleportFacing) | Literal keyword. | `facing`<br>[enum reference](#static-enum-teleportfacing-189) |
    | 4 | `lookAtEntity` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 5 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 5 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 9. `/teleport <destination>`
    | # | Parameter | Required | Type | Description | Candidates |
@@ -2404,7 +2403,7 @@ Teleports entities (players, mobs, etc.).
     | --- | --- | --- | --- | --- | --- |
     | 1 | `victim` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
     | 2 | `destination` | Yes | Target (id:8) | Entity/player selector or player name. Coordinate argument. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-    | 3 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+    | 3 | `checkForBlocks` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 ### /tell
 
@@ -2453,7 +2452,7 @@ Tests whether a certain block is in a specific location.
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `position` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 2 | `tileName` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#enum-static-24) |
+   | 2 | `tileName` | Yes | Static Enum (Block) | Value from static enum `Block`. | `minecraft:cyan_terracotta`, `cyan_terracotta`, `minecraft:blue_candle`, `blue_candle`, `minecraft:dark_oak_wood`, `dark_oak_wood`, `minecraft:birch_standing_sign`, `birch_standing_sign`, `minecraft:polished_basalt`, `polished_basalt` ... (2650 total)<br>[enum reference](#static-enum-block-24) |
    | 3 | `blockStates` | No | Block States (id:84) | Block state expression. | `["facing_direction"=2]`, `{"facing_direction":2}` |
 
 ### /testforblocks
@@ -2468,7 +2467,7 @@ Tests whether the blocks in two regions match.
    | 1 | `begin` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 2 | `end` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 3 | `destination` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 4 | `mode` | No | Static Enum (TestForBlocksMode) | Value from static enum `TestForBlocksMode`. | `masked`, `all`<br>[enum reference](#enum-static-194) |
+   | 4 | `mode` | No | Static Enum (TestForBlocksMode) | Value from static enum `TestForBlocksMode`. | `masked`, `all`<br>[enum reference](#static-enum-testforblocksmode-194) |
 
 ### /tickingarea
 
@@ -2479,58 +2478,58 @@ Add, remove, or list ticking areas.
 1. `/tickingarea add <from> <to> [<name>] [<preload>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (TickingAreaModeAdd) | Literal keyword. | `add`<br>[enum reference](#enum-static-195) |
+   | 1 | `mode` | Yes | Static Enum (TickingAreaModeAdd) | Literal keyword. | `add`<br>[enum reference](#static-enum-tickingareamodeadd-195) |
    | 2 | `from` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 3 | `to` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 4 | `name` | No | String (id:56) | Single string token. | `example_text` |
-   | 5 | `preload` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 5 | `preload` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 2. `/tickingarea add circle <center> <radius> [<name>] [<preload>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (TickingAreaModeAdd) | Literal keyword. | `add`<br>[enum reference](#enum-static-195) |
-   | 2 | `circle` | Yes | Static Enum (AddTickingAreaType) | Literal keyword. | `circle`<br>[enum reference](#enum-static-200) |
+   | 1 | `mode` | Yes | Static Enum (TickingAreaModeAdd) | Literal keyword. | `add`<br>[enum reference](#static-enum-tickingareamodeadd-195) |
+   | 2 | `circle` | Yes | Static Enum (AddTickingAreaType) | Literal keyword. | `circle`<br>[enum reference](#static-enum-addtickingareatype-200) |
    | 3 | `center` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
    | 4 | `radius` | Yes | Integer (id:1) | Whole number. Radius value. | `0`, `1`, `-1` |
    | 5 | `name` | No | String (id:56) | Single string token. | `example_text` |
-   | 6 | `preload` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 6 | `preload` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 3. `/tickingarea remove <position>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (TickingAreaModeRemove) | Literal keyword. | `remove`<br>[enum reference](#enum-static-196) |
+   | 1 | `mode` | Yes | Static Enum (TickingAreaModeRemove) | Literal keyword. | `remove`<br>[enum reference](#static-enum-tickingareamoderemove-196) |
    | 2 | `position` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
 
 4. `/tickingarea remove <name>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (TickingAreaModeRemove) | Literal keyword. | `remove`<br>[enum reference](#enum-static-196) |
+   | 1 | `mode` | Yes | Static Enum (TickingAreaModeRemove) | Literal keyword. | `remove`<br>[enum reference](#static-enum-tickingareamoderemove-196) |
    | 2 | `name` | Yes | String (id:56) | Single string token. | `example_text` |
 
 5. `/tickingarea remove_all`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (TickingAreaModeRemoveAll) | Literal keyword. | `remove_all`<br>[enum reference](#enum-static-197) |
+   | 1 | `mode` | Yes | Static Enum (TickingAreaModeRemoveAll) | Literal keyword. | `remove_all`<br>[enum reference](#static-enum-tickingareamoderemoveall-197) |
 
 6. `/tickingarea list [all-dimensions]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (TickingAreaModeList) | Literal keyword. | `list`<br>[enum reference](#enum-static-198) |
-   | 2 | `all-dimensions` | No | Static Enum (AllDimensions) | Literal keyword. | `all-dimensions`<br>[enum reference](#enum-static-201) |
+   | 1 | `mode` | Yes | Static Enum (TickingAreaModeList) | Literal keyword. | `list`<br>[enum reference](#static-enum-tickingareamodelist-198) |
+   | 2 | `all-dimensions` | No | Static Enum (AllDimensions) | Literal keyword. | `all-dimensions`<br>[enum reference](#static-enum-alldimensions-201) |
 
 7. `/tickingarea preload <position> [<preload>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (TickingAreaModePreload) | Literal keyword. | `preload`<br>[enum reference](#enum-static-199) |
+   | 1 | `mode` | Yes | Static Enum (TickingAreaModePreload) | Literal keyword. | `preload`<br>[enum reference](#static-enum-tickingareamodepreload-199) |
    | 2 | `position` | Yes | Block Position (id:64) | Block coordinates (integer x y z). Coordinate argument. | `~ ~ ~`, `100 64 -30` |
-   | 3 | `preload` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 3 | `preload` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 8. `/tickingarea preload <name> [<preload>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (TickingAreaModePreload) | Literal keyword. | `preload`<br>[enum reference](#enum-static-199) |
+   | 1 | `mode` | Yes | Static Enum (TickingAreaModePreload) | Literal keyword. | `preload`<br>[enum reference](#static-enum-tickingareamodepreload-199) |
    | 2 | `name` | Yes | String (id:56) | Single string token. | `example_text` |
-   | 3 | `preload` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 3 | `preload` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 ### /time
 
@@ -2541,26 +2540,26 @@ Changes or queries the world's game time.
 1. `/time add <amount>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (TimeModeAdd) | Literal keyword. | `add`<br>[enum reference](#enum-static-203) |
+   | 1 | `mode` | Yes | Static Enum (TimeModeAdd) | Literal keyword. | `add`<br>[enum reference](#static-enum-timemodeadd-203) |
    | 2 | `amount` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
 
 2. `/time set <amount>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (TimeModeSet) | Literal keyword. | `set`<br>[enum reference](#enum-static-202) |
+   | 1 | `mode` | Yes | Static Enum (TimeModeSet) | Literal keyword. | `set`<br>[enum reference](#static-enum-timemodeset-202) |
    | 2 | `amount` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
 
 3. `/time set <time>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (TimeModeSet) | Literal keyword. | `set`<br>[enum reference](#enum-static-202) |
-   | 2 | `time` | Yes | Static Enum (TimeSpec) | Value from static enum `TimeSpec`. Time value. | `day`, `sunrise`, `noon`, `sunset`, `night`, `midnight`<br>[enum reference](#enum-static-206) |
+   | 1 | `mode` | Yes | Static Enum (TimeModeSet) | Literal keyword. | `set`<br>[enum reference](#static-enum-timemodeset-202) |
+   | 2 | `time` | Yes | Static Enum (TimeSpec) | Value from static enum `TimeSpec`. Time value. | `day`, `sunrise`, `noon`, `sunset`, `night`, `midnight`<br>[enum reference](#static-enum-timespec-206) |
 
 4. `/time query <time>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (TimeModeQuery) | Literal keyword. | `query`<br>[enum reference](#enum-static-204) |
-   | 2 | `time` | Yes | Static Enum (TimeQuery) | Value from static enum `TimeQuery`. Time value. | `daytime`, `gametime`, `day`<br>[enum reference](#enum-static-205) |
+   | 1 | `mode` | Yes | Static Enum (TimeModeQuery) | Literal keyword. | `query`<br>[enum reference](#static-enum-timemodequery-204) |
+   | 2 | `time` | Yes | Static Enum (TimeQuery) | Value from static enum `TimeQuery`. Time value. | `daytime`, `gametime`, `day`<br>[enum reference](#static-enum-timequery-205) |
 
 ### /title
 
@@ -2572,26 +2571,26 @@ Controls screen titles.
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `clear` | Yes | Static Enum (TitleClear) | Literal keyword. | `clear`<br>[enum reference](#enum-static-207) |
+   | 2 | `clear` | Yes | Static Enum (TitleClear) | Literal keyword. | `clear`<br>[enum reference](#static-enum-titleclear-207) |
 
 2. `/title <player> reset`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `reset` | Yes | Static Enum (TitleReset) | Literal keyword. | `reset`<br>[enum reference](#enum-static-208) |
+   | 2 | `reset` | Yes | Static Enum (TitleReset) | Literal keyword. | `reset`<br>[enum reference](#static-enum-titlereset-208) |
 
 3. `/title <player> <titleLocation> <titleText>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `titleLocation` | Yes | Static Enum (TitleSet) | Value from static enum `TitleSet`. | `title`, `subtitle`, `actionbar`<br>[enum reference](#enum-static-209) |
+   | 2 | `titleLocation` | Yes | Static Enum (TitleSet) | Value from static enum `TitleSet`. | `title`, `subtitle`, `actionbar`<br>[enum reference](#static-enum-titleset-209) |
    | 3 | `titleText` | Yes | Message (id:68) | Greedy text message. | `hello world` |
 
 4. `/title <player> times <fadeIn> <stay> <fadeOut>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `times` | Yes | Static Enum (TitleTimes) | Literal keyword. Time value. | `times`<br>[enum reference](#enum-static-210) |
+   | 2 | `times` | Yes | Static Enum (TitleTimes) | Literal keyword. Time value. | `times`<br>[enum reference](#static-enum-titletimes-210) |
    | 3 | `fadeIn` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 4 | `stay` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 5 | `fadeOut` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
@@ -2606,26 +2605,26 @@ Controls screen titles with JSON messages.
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `clear` | Yes | Static Enum (TitleRawClear) | Literal keyword. | `clear`<br>[enum reference](#enum-static-211) |
+   | 2 | `clear` | Yes | Static Enum (TitleRawClear) | Literal keyword. | `clear`<br>[enum reference](#static-enum-titlerawclear-211) |
 
 2. `/titleraw <player> reset`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `reset` | Yes | Static Enum (TitleRawReset) | Literal keyword. | `reset`<br>[enum reference](#enum-static-212) |
+   | 2 | `reset` | Yes | Static Enum (TitleRawReset) | Literal keyword. | `reset`<br>[enum reference](#static-enum-titlerawreset-212) |
 
 3. `/titleraw <player> <titleLocation> <raw_json_titleText>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `titleLocation` | Yes | Static Enum (TitleRawSet) | Value from static enum `TitleRawSet`. | `title`, `subtitle`, `actionbar`<br>[enum reference](#enum-static-213) |
+   | 2 | `titleLocation` | Yes | Static Enum (TitleRawSet) | Value from static enum `TitleRawSet`. | `title`, `subtitle`, `actionbar`<br>[enum reference](#static-enum-titlerawset-213) |
    | 3 | `raw json titleText` | Yes | JSON (id:74) | JSON object/string (components or raw text payload). | `{"text":"Hello"}` |
 
 4. `/titleraw <player> times <fadeIn> <stay> <fadeOut>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `times` | Yes | Static Enum (TitleRawTimes) | Literal keyword. Time value. | `times`<br>[enum reference](#enum-static-214) |
+   | 2 | `times` | Yes | Static Enum (TitleRawTimes) | Literal keyword. Time value. | `times`<br>[enum reference](#static-enum-titlerawtimes-214) |
    | 3 | `fadeIn` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 4 | `stay` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
    | 5 | `fadeOut` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
@@ -2661,13 +2660,13 @@ Sets the weather.
 1. `/weather <type> [<duration>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `type` | Yes | Static Enum (WeatherType) | Value from static enum `WeatherType`. | `clear`, `rain`, `thunder`<br>[enum reference](#enum-static-215) |
+   | 1 | `type` | Yes | Static Enum (WeatherType) | Value from static enum `WeatherType`. | `clear`, `rain`, `thunder`<br>[enum reference](#static-enum-weathertype-215) |
    | 2 | `duration` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
 
 2. `/weather query`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `query` | Yes | Static Enum (WeatherQuery) | Literal keyword. | `query`<br>[enum reference](#enum-static-216) |
+   | 1 | `query` | Yes | Static Enum (WeatherQuery) | Literal keyword. | `query`<br>[enum reference](#static-enum-weatherquery-216) |
 
 ### /xp
 
@@ -2700,47 +2699,47 @@ Script debugger commands.
 1. `/script debugger listen <port>`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (ScriptDebugModeDebugger) | Literal keyword. | `debugger`<br>[enum reference](#enum-static-14) |
-   | 2 | `action` | Yes | Static Enum (ScriptDebuggerListen) | Literal keyword. | `listen`<br>[enum reference](#enum-static-15) |
+   | 1 | `mode` | Yes | Static Enum (ScriptDebugModeDebugger) | Literal keyword. | `debugger`<br>[enum reference](#static-enum-scriptdebugmodedebugger-14) |
+   | 2 | `action` | Yes | Static Enum (ScriptDebuggerListen) | Literal keyword. | `listen`<br>[enum reference](#static-enum-scriptdebuggerlisten-15) |
    | 3 | `port` | Yes | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
 
 2. `/script debugger connect [<host>] [<port>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (ScriptDebugModeDebugger) | Literal keyword. | `debugger`<br>[enum reference](#enum-static-14) |
-   | 2 | `action` | Yes | Static Enum (ScriptDebuggerConnect) | Literal keyword. | `connect`<br>[enum reference](#enum-static-16) |
+   | 1 | `mode` | Yes | Static Enum (ScriptDebugModeDebugger) | Literal keyword. | `debugger`<br>[enum reference](#static-enum-scriptdebugmodedebugger-14) |
+   | 2 | `action` | Yes | Static Enum (ScriptDebuggerConnect) | Literal keyword. | `connect`<br>[enum reference](#static-enum-scriptdebuggerconnect-16) |
    | 3 | `host` | No | String (id:56) | Single string token. | `example_text` |
    | 4 | `port` | No | Integer (id:1) | Whole number. | `0`, `1`, `-1` |
 
 3. `/script debugger close`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (ScriptDebugModeDebugger) | Literal keyword. | `debugger`<br>[enum reference](#enum-static-14) |
-   | 2 | `action` | Yes | Static Enum (ScriptDebuggerClose) | Literal keyword. | `close`<br>[enum reference](#enum-static-17) |
+   | 1 | `mode` | Yes | Static Enum (ScriptDebugModeDebugger) | Literal keyword. | `debugger`<br>[enum reference](#static-enum-scriptdebugmodedebugger-14) |
+   | 2 | `action` | Yes | Static Enum (ScriptDebuggerClose) | Literal keyword. | `close`<br>[enum reference](#static-enum-scriptdebuggerclose-17) |
 
 4. `/script profiler start`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (ScriptDebugModeProfiler) | Literal keyword. | `profiler`<br>[enum reference](#enum-static-18) |
-   | 2 | `action` | Yes | Static Enum (ScriptProfilerStart) | Literal keyword. | `start`<br>[enum reference](#enum-static-19) |
+   | 1 | `mode` | Yes | Static Enum (ScriptDebugModeProfiler) | Literal keyword. | `profiler`<br>[enum reference](#static-enum-scriptdebugmodeprofiler-18) |
+   | 2 | `action` | Yes | Static Enum (ScriptProfilerStart) | Literal keyword. | `start`<br>[enum reference](#static-enum-scriptprofilerstart-19) |
 
 5. `/script profiler stop`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (ScriptDebugModeProfiler) | Literal keyword. | `profiler`<br>[enum reference](#enum-static-18) |
-   | 2 | `action` | Yes | Static Enum (ScriptProfilerStop) | Literal keyword. | `stop`<br>[enum reference](#enum-static-20) |
+   | 1 | `mode` | Yes | Static Enum (ScriptDebugModeProfiler) | Literal keyword. | `profiler`<br>[enum reference](#static-enum-scriptdebugmodeprofiler-18) |
+   | 2 | `action` | Yes | Static Enum (ScriptProfilerStop) | Literal keyword. | `stop`<br>[enum reference](#static-enum-scriptprofilerstop-20) |
 
 6. `/script diagnostics startcapture`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (ScriptDebugModeDiagnostics) | Literal keyword. | `diagnostics`<br>[enum reference](#enum-static-21) |
-   | 2 | `action` | Yes | Static Enum (ScriptDiagnosticsStartCapture) | Literal keyword. | `startcapture`<br>[enum reference](#enum-static-22) |
+   | 1 | `mode` | Yes | Static Enum (ScriptDebugModeDiagnostics) | Literal keyword. | `diagnostics`<br>[enum reference](#static-enum-scriptdebugmodediagnostics-21) |
+   | 2 | `action` | Yes | Static Enum (ScriptDiagnosticsStartCapture) | Literal keyword. | `startcapture`<br>[enum reference](#static-enum-scriptdiagnosticsstartcapture-22) |
 
 7. `/script diagnostics stopcapture`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `mode` | Yes | Static Enum (ScriptDebugModeDiagnostics) | Literal keyword. | `diagnostics`<br>[enum reference](#enum-static-21) |
-   | 2 | `action` | Yes | Static Enum (ScriptDiagnosticsStopCapture) | Literal keyword. | `stopcapture`<br>[enum reference](#enum-static-23) |
+   | 1 | `mode` | Yes | Static Enum (ScriptDebugModeDiagnostics) | Literal keyword. | `diagnostics`<br>[enum reference](#static-enum-scriptdebugmodediagnostics-21) |
+   | 2 | `action` | Yes | Static Enum (ScriptDiagnosticsStopCapture) | Literal keyword. | `stopcapture`<br>[enum reference](#static-enum-scriptdiagnosticsstopcapture-23) |
 
 ### /scriptevent
 
@@ -2781,14 +2780,14 @@ Sets a player's ability.
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `ability` | Yes | Static Enum (Ability) | Value from static enum `Ability`. | `mayfly`, `mute`, `worldbuilder`<br>[enum reference](#enum-static-220) |
-   | 3 | `value` | Yes | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 2 | `ability` | Yes | Static Enum (Ability) | Value from static enum `Ability`. | `mayfly`, `mute`, `worldbuilder`<br>[enum reference](#static-enum-ability-220) |
+   | 3 | `value` | Yes | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 2. `/ability <player> [<ability>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
    | 1 | `player` | Yes | Target (id:8) | Entity/player selector or player name. | `@s`, `@p`, `@a`, `@e[type=zombie]`, `PlayerName` |
-   | 2 | `ability` | No | Static Enum (Ability) | Value from static enum `Ability`. | `mayfly`, `mute`, `worldbuilder`<br>[enum reference](#enum-static-220) |
+   | 2 | `ability` | No | Static Enum (Ability) | Value from static enum `Ability`. | `mayfly`, `mute`, `worldbuilder`<br>[enum reference](#static-enum-ability-220) |
 
 ### /immutableworld
 
@@ -2799,7 +2798,7 @@ Sets the immutable state of the world.
 1. `/immutableworld [<value>]`
    | # | Parameter | Required | Type | Description | Candidates |
    | --- | --- | --- | --- | --- | --- |
-   | 1 | `value` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#enum-static-5) |
+   | 1 | `value` | No | Static Enum (Boolean) | Value from static enum `Boolean`. | `true`, `false`<br>[enum reference](#static-enum-boolean-5) |
 
 ### /worldbuilder
 
